@@ -1,0 +1,21 @@
+# No jars, ever — distribution principle
+*.jar
+
+# Tier C manual folder — contents recorded in the exceptions register
+manual/
+
+# Build output
+pack/*.mrpack
+pack/*.zip
+.packwiz-cache/
+
+# Worlds and saves belong in backups, not version control
+saves/
+world/
+world_nether/
+world_the_end/
+
+# Local instance noise
+logs/
+crash-reports/
+*.log
