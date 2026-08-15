@@ -1,0 +1,13 @@
+name = "Sappy  Tree Physics"
+filename = "treephysics-1.0.1.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "fbb35282b1318a252049b08d9561550e59afeeb3"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 8031097
+project-id = 1530930

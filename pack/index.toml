@@ -17,8 +17,18 @@ file = "kpackagetool6"
 hash = "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
 
 [[files]]
+file = "mods/absolute-kinematics.pw.toml"
+hash = "8c2d4c4611c6a9936af4fb747ae945eb53d024a8b584c415f52bdbf4a49e5119"
+metafile = true
+
+[[files]]
 file = "mods/create-aeronautics.pw.toml"
 hash = "5fab8d2e412683dfd72f08cf6750e51b03cb43192e8eb783e962ba28d20978bc"
+metafile = true
+
+[[files]]
+file = "mods/create-aeroworks.pw.toml"
+hash = "8bc79b14b3fa74bbb49550cf543a1f4b6303e8e09c1f73125a022783e9d02711"
 metafile = true
 
 [[files]]
@@ -27,11 +37,66 @@ hash = "0e590f9694cb6d9d1353dea5602cb911a6628cfb0aa36b408bc2c30fc3e88c96"
 metafile = true
 
 [[files]]
+file = "mods/create-high-seas.pw.toml"
+hash = "d9c986deae70a8eeaacf3e9a6e2cf70df8db3fd411b4c8f4fb2df79e27963007"
+metafile = true
+
+[[files]]
 file = "mods/create.pw.toml"
 hash = "dcaf5f2e28db0b9a127d0167456832341045ddc9aec058c3d9fcf53f618d2404"
 metafile = true
 
 [[files]]
+file = "mods/drive-by-sable.pw.toml"
+hash = "9138f808e52f9e56180a15a15d9c882278ecf9f024783de18c2a90bad8e589be"
+metafile = true
+
+[[files]]
+file = "mods/papa-portable-aeronautics-physics-assembler.pw.toml"
+hash = "0937b82b7b1831ade5afe5e2a77ad4799567bdb2bc6c3de95178d74453343082"
+metafile = true
+
+[[files]]
+file = "mods/porkchop-express.pw.toml"
+hash = "595695e735a37b5e50a6bf459f7849f54faa5c198c8985559d121b8fca9707c9"
+metafile = true
+
+[[files]]
+file = "mods/ragdoll-reactions.pw.toml"
+hash = "89bd0f15795c70a1e06074e22bc5d80969abd48e1f540c79e3023cf8be51bef9"
+metafile = true
+
+[[files]]
+file = "mods/sable-aabb-fix.pw.toml"
+hash = "3446e0295165ca5d5a2ac6d6b04c6cf08bfe88f7f217074036de2c00d149cb19"
+metafile = true
+
+[[files]]
+file = "mods/sable-explosions-fix.pw.toml"
+hash = "5d9c1da07cfac71f3fdc523b98a1b7324e19ba45eea40507d3f1d808e4767e4b"
+metafile = true
+
+[[files]]
+file = "mods/sable-ragdolls.pw.toml"
+hash = "bf3c84eff52457596d58a73882e72759804117f0731a0fde343cfd54d33e55ba"
+metafile = true
+
+[[files]]
 file = "mods/sable.pw.toml"
 hash = "674aaf0dc67f808f0054cfc7bbe041d6725fcbbe97644a85ffbd946a22d35666"
+metafile = true
+
+[[files]]
+file = "mods/sable_beyond.pw.toml"
+hash = "72817b94a481d4a023a4eb7a3007374a5682ae6ffccbf7dcb5142df2639bf553"
+metafile = true
+
+[[files]]
+file = "mods/sablecompat.pw.toml"
+hash = "b9ceb0fa4707ced2e0467f334ce8b6cb2fd60c729b47aee065e2bb0d5b905189"
+metafile = true
+
+[[files]]
+file = "mods/sappy-tree-physics.pw.toml"
+hash = "7ad212e0b8fcdaac16e2646ad27e6d060ce54a8d763d446e756d98f61191c6fe"
 metafile = true
