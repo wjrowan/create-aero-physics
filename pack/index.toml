@@ -1,22 +1,6 @@
 hash-format = "sha256"
 
 [[files]]
-file = "cat"
-hash = "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
-
-[[files]]
-file = "cd"
-hash = "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
-
-[[files]]
-file = "chmod"
-hash = "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
-
-[[files]]
-file = "kpackagetool6"
-hash = "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
-
-[[files]]
 file = "mods/absolute-kinematics.pw.toml"
 hash = "8c2d4c4611c6a9936af4fb747ae945eb53d024a8b584c415f52bdbf4a49e5119"
 metafile = true
