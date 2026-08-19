@@ -1,12 +1,92 @@
 hash-format = "sha256"
 
 [[files]]
+file = "config/biomesize.json"
+hash = "83f8df75a9d0ea58642d712dc8dc2c817b3e7729d94ee55a1c7ad348d397217d"
+
+[[files]]
 file = "config/create_connected-common.toml"
 hash = "74ba0731b3d72575fc019d8380d3a3e93d4d88088722c1b815d080cc7db02f09"
 
 [[files]]
+file = "datapacks/aerophys-defaults/data/aerophys/function/init.mcfunction"
+hash = "b3b59e058380c3533532253ba13beb72682de31196ea5d3cfbf051ecf1ff10a5"
+
+[[files]]
+file = "datapacks/aerophys-defaults/data/aerophys/function/load.mcfunction"
+hash = "7a91ae6e1c277b61c25921f59a3029b11ca87a1b1bee99521b335ce6e3ecd46a"
+
+[[files]]
+file = "datapacks/aerophys-defaults/data/minecraft/dimension_type/the_nether.json"
+hash = "6bf0ab3c80e408b529b4a538e4287e8e41c3039ef8838168f73aec38ef52af58"
+
+[[files]]
+file = "datapacks/aerophys-defaults/data/minecraft/tags/function/load.json"
+hash = "114aafe12b9861cc78ad7d2619dbb5b725f0ae6f06ead0be679583558529eefa"
+
+[[files]]
+file = "datapacks/aerophys-defaults/data/minecraft/worldgen/structure_set/desert_pyramids.json"
+hash = "09b522586aef8809318fc7cd1c847d01cb12d7eecbff96264e7c4346d7c9f01a"
+
+[[files]]
+file = "datapacks/aerophys-defaults/data/minecraft/worldgen/structure_set/igloos.json"
+hash = "735d6e84954aa584e5e57b80ba254679ac9f1fa61aefa0c23cf1c882791bdb4b"
+
+[[files]]
+file = "datapacks/aerophys-defaults/data/minecraft/worldgen/structure_set/jungle_temples.json"
+hash = "4d3ce07fe7dca4779c6766d1d02f6a76aa5309e049e54537eae0ee51a56d5627"
+
+[[files]]
+file = "datapacks/aerophys-defaults/data/minecraft/worldgen/structure_set/nether_complexes.json"
+hash = "1609b47b115a725ff8469c34317552cf4becca0f5eb55bc71156689e3b80e15c"
+
+[[files]]
+file = "datapacks/aerophys-defaults/data/minecraft/worldgen/structure_set/pillager_outposts.json"
+hash = "79b288058a426687d36188241146ae61c3fe8963c7507d301f8923535cfa6426"
+
+[[files]]
+file = "datapacks/aerophys-defaults/data/minecraft/worldgen/structure_set/ruined_portals.json"
+hash = "6dc098b74ca799dfaea1bc5f2321cf4aad2bdfc0945b1c156061eacdacffd163"
+
+[[files]]
+file = "datapacks/aerophys-defaults/data/minecraft/worldgen/structure_set/swamp_huts.json"
+hash = "16376e2de52cac887900baa838fc88a9371a16aefbd58efb6f620d5085c4a331"
+
+[[files]]
+file = "datapacks/aerophys-defaults/data/minecraft/worldgen/structure_set/villages.json"
+hash = "8e1faa3406d33fa874ae4b54d96005fb384d6c92d32593a820d4191bcab053cf"
+
+[[files]]
+file = "datapacks/aerophys-defaults/data/minecraft/worldgen/structure_set/woodland_mansions.json"
+hash = "51107dced091d00021aa680f9a3ead0c74949851f9438b0038e33dbc015395f4"
+
+[[files]]
+file = "datapacks/aerophys-defaults/pack.mcmeta"
+hash = "b172879c5ed321ee8d23f4a86f24f14ea7643f0ade5b889e93b12328453d8b23"
+
+[[files]]
 file = "mods/absolute-kinematics.pw.toml"
 hash = "8c2d4c4611c6a9936af4fb747ae945eb53d024a8b584c415f52bdbf4a49e5119"
+metafile = true
+
+[[files]]
+file = "mods/amplified-nether-height.pw.toml"
+hash = "9fb0bb83d8818d33f326b68c49d7a5d26c3005b8e6893c16bf044e95e3ac59d5"
+metafile = true
+
+[[files]]
+file = "mods/amplified-nether.pw.toml"
+hash = "9efd2467725934e660f256346950d4e10ca44f034475ce8909a29fe0790dd5cc"
+metafile = true
+
+[[files]]
+file = "mods/balm.pw.toml"
+hash = "7dba9a4a9894a6bbab3a8c7edcc718499297412247fc0e8ccebf75b760c85140"
+metafile = true
+
+[[files]]
+file = "mods/biomesize.pw.toml"
+hash = "f2707463a84b3da22e3b0bb89f702f5df944b9da49bd23e701982883d65a9977"
 metafile = true
 
 [[files]]
@@ -70,6 +150,11 @@ hash = "350357b34feae2f0971d114ba856e4915e508efec110eea5ebdeac419d515e08"
 metafile = true
 
 [[files]]
+file = "mods/cupboard.pw.toml"
+hash = "6e6e089e208a0f1309fd704a2733e644c86ecce953b4ec31e7d0f1bdef6005d4"
+metafile = true
+
+[[files]]
 file = "mods/distanthorizons.pw.toml"
 hash = "d5b9c23df79ef871a70032567db2512904251347bdf13da80fbb8b00a846a79a"
 metafile = true
@@ -85,6 +170,11 @@ hash = "c5bb130a9bc6f565c90f5ceeec03bee73a4eaae801a7e44364941dff8b8502d4"
 metafile = true
 
 [[files]]
+file = "mods/globalpacks.pw.toml"
+hash = "a7f2ae8ea415e95ce1a3518b66edcaf124d8903ff9101d07331f7fec92b3400f"
+metafile = true
+
+[[files]]
 file = "mods/iris-veil-compat.pw.toml"
 hash = "70ced2c48045dc299e69b0b0a469f993f744a44bba1422c4a64780515dab3da9"
 metafile = true
@@ -97,6 +187,11 @@ metafile = true
 [[files]]
 file = "mods/linear-bearing.pw.toml"
 hash = "e92248ff7e47d94175ee315550946858967e9f1076653468a1d10a6aa53a4d82"
+metafile = true
+
+[[files]]
+file = "mods/netherportalfix.pw.toml"
+hash = "748bdcbc7788a77881979189827f1baf3f6ef5fdaeb58b00e51e043c2c0abe39"
 metafile = true
 
 [[files]]
