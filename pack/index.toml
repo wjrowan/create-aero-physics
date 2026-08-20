@@ -65,8 +65,17 @@ file = "datapacks/aerophys-defaults/pack.mcmeta"
 hash = "b172879c5ed321ee8d23f4a86f24f14ea7643f0ade5b889e93b12328453d8b23"
 
 [[files]]
+file = "grep"
+hash = "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+
+[[files]]
 file = "mods/absolute-kinematics.pw.toml"
 hash = "8c2d4c4611c6a9936af4fb747ae945eb53d024a8b584c415f52bdbf4a49e5119"
+metafile = true
+
+[[files]]
+file = "mods/almostunified.pw.toml"
+hash = "3805fe2877cffdae5e7bf74d85069a2535daa39a0f3ed766755be49294a07680"
 metafile = true
 
 [[files]]
@@ -110,6 +119,11 @@ hash = "e002fab16a9b9ef0a35844030339612a38d3c58b0b93e97a34eb43ddc9108be7"
 metafile = true
 
 [[files]]
+file = "mods/create-aeronautics-automated-logistics.pw.toml"
+hash = "438adac16323dac49409821993ced526c08cf3cbba01bca3bdf86a9a81a70167"
+metafile = true
+
+[[files]]
 file = "mods/create-aeronautics-climbable-rope.pw.toml"
 hash = "db2ec960ce42b3d381003c82cff71e68a7c55c68117c3bf43ad2418111260065"
 metafile = true
@@ -125,6 +139,11 @@ hash = "8bc79b14b3fa74bbb49550cf543a1f4b6303e8e09c1f73125a022783e9d02711"
 metafile = true
 
 [[files]]
+file = "mods/create-break-levitite.pw.toml"
+hash = "95f70f3504c362dfff5c6883e17c6c7cc2f7d64506d939a87764d18b3f85d36e"
+metafile = true
+
+[[files]]
 file = "mods/create-coasters-simulated.pw.toml"
 hash = "d5aad6415413aa777ed89ae55912f33c86757321c7c16c8392ce2e1429b920d5"
 metafile = true
@@ -135,8 +154,23 @@ hash = "61afa588fd3156a29418aef463c527308b014e72d86b5ca7c03f2f28973ca27a"
 metafile = true
 
 [[files]]
+file = "mods/create-dragons-plus.pw.toml"
+hash = "80547db2ebfc71d0d649534fe6fee7dabcf2a58770e8ff38218f6db874382204"
+metafile = true
+
+[[files]]
+file = "mods/create-enchantment-industry.pw.toml"
+hash = "0ae5b9a5883e79282ad756ea205f3fa1af11ced75bb4ba5b74e3d32e1ea684c9"
+metafile = true
+
+[[files]]
 file = "mods/create-high-seas.pw.toml"
 hash = "d9c986deae70a8eeaacf3e9a6e2cf70df8db3fd411b4c8f4fb2df79e27963007"
+metafile = true
+
+[[files]]
+file = "mods/create-mob-spawners.pw.toml"
+hash = "ba6d9babe5ec9b683b620b391f13169b2d998ec1285d5291cf8ea49028a1445c"
 metafile = true
 
 [[files]]
@@ -192,6 +226,11 @@ metafile = true
 [[files]]
 file = "mods/netherportalfix.pw.toml"
 hash = "748bdcbc7788a77881979189827f1baf3f6ef5fdaeb58b00e51e043c2c0abe39"
+metafile = true
+
+[[files]]
+file = "mods/no-durability.pw.toml"
+hash = "80ca00f588bd0531e5c5c37452aad65953cf67c7b8e0cf316dbdf35a507ff817"
 metafile = true
 
 [[files]]
@@ -252,6 +291,11 @@ metafile = true
 [[files]]
 file = "mods/sodium.pw.toml"
 hash = "abc285fb28b8df872e4c2bb31e04fc23e2724d9c84b4cb6fbc4320fc569c758f"
+metafile = true
+
+[[files]]
+file = "mods/subborder.pw.toml"
+hash = "8e40316e6a120dcd0d4ebaf88b0ba26ba5d62d2ace8ebf09fb2c51977654ec4e"
 metafile = true
 
 [[files]]

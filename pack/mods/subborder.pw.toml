@@ -1,0 +1,13 @@
+name = "SubBorder"
+filename = "subborder-1.0-SNAPSHOT.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "ad35e8b6fe63be35c520d8ed4b4bf2a41eb40dda"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 8145450
+project-id = 1553834
