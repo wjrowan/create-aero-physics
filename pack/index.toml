@@ -25,6 +25,14 @@ file = "datapacks/aerophys-defaults/data/minecraft/tags/function/load.json"
 hash = "114aafe12b9861cc78ad7d2619dbb5b725f0ae6f06ead0be679583558529eefa"
 
 [[files]]
+file = "datapacks/aerophys-defaults/data/minecraft/worldgen/placed_feature/ore_ancient_debris_large.json"
+hash = "dc644d4cfb87e8fe32520516477af1c8ae53651f43b11d2dd922f76e87dd11f0"
+
+[[files]]
+file = "datapacks/aerophys-defaults/data/minecraft/worldgen/placed_feature/ore_debris_small.json"
+hash = "1550ba08998d855f541449dd89e53f5b95f7088aaaa1198bd684056e20933d6f"
+
+[[files]]
 file = "datapacks/aerophys-defaults/data/minecraft/worldgen/structure_set/desert_pyramids.json"
 hash = "09b522586aef8809318fc7cd1c847d01cb12d7eecbff96264e7c4346d7c9f01a"
 
