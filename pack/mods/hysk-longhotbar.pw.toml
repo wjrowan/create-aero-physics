@@ -1,0 +1,13 @@
+name = "Hysk-LongHotbar"
+filename = "LongHotbar-2.1.0Y+1.21.1+neoforge.jar"
+side = "client"
+
+[download]
+url = "https://cdn.modrinth.com/data/JtgORGSF/versions/wJaBc8Ga/LongHotbar-2.1.0Y%2B1.21.1%2Bneoforge.jar"
+hash-format = "sha512"
+hash = "fc551e57926c1e0f8378513dd0d84e02b650c1a8d9e2513325cf70cacc7ae4f5aa04d381cf7e7b2bb7ade4813e1544e2f0174608a967fc706b8c0bebc069adae"
+
+[update]
+[update.modrinth]
+mod-id = "JtgORGSF"
+version = "wJaBc8Ga"

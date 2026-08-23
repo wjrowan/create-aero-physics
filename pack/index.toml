@@ -1,16 +1,45 @@
 hash-format = "sha256"
 
 [[files]]
-file = "config/DistantHorizons.toml"
-hash = "995f0b22b4118949609d7b69f3851b2ad99271963c644189598df786a7ca53ee"
-
-[[files]]
 file = "config/biomesize.json"
 hash = "83f8df75a9d0ea58642d712dc8dc2c817b3e7729d94ee55a1c7ad348d397217d"
 
 [[files]]
 file = "config/create_connected-common.toml"
 hash = "74ba0731b3d72575fc019d8380d3a3e93d4d88088722c1b815d080cc7db02f09"
+
+[[files]]
+file = "config/highseas-client.toml"
+hash = "d0509651bab65e8380c2a530b3b91130cb3266dd8e80837aa8a075582b1e3189"
+
+[[files]]
+file = "config/highseas-common.toml"
+hash = "8d995fc6fdd14082200a902a25a30992e536a73119a3cf6500c9c65b9a000bd6"
+
+[[files]]
+file = "configureddefaults/config/DistantHorizons.toml"
+hash = "995f0b22b4118949609d7b69f3851b2ad99271963c644189598df786a7ca53ee"
+
+[[files]]
+file = "configureddefaults/config/ftbchunks-client.snbt"
+hash = "d549ee175d7763fdc2140656c6bf61f0b5047f10d13f7b0e2b3b0004773d3602"
+
+[[files]]
+file = "configureddefaults/config/iris.properties"
+hash = "02d3f12ed8ab0949339764e22af3aaa2cf71904e5057c7c5efdfdd6e277cb901"
+
+[[files]]
+file = "configureddefaults/options.txt"
+hash = "1ffd7dbb45759935e78027b5b392ffa07a8347dfd61ffdfd21f424bb77810e9d"
+
+[[files]]
+file = "configureddefaults/shaderpacks/ComplementaryReimagined_r5.8.1 + EuphoriaPatches_1.9.3.txt"
+hash = "86b4d85ca2c86bd61512e595ad1ef41cbd85bccd656e8fd74c9daf59eafd0251"
+
+[[files]]
+file = "configureddefaults/shaderpacks/complementary-reimagined.pw.toml"
+hash = "ea258ed5bf495d9017eeadc3cbf9bd67b1e672d843826bc077135548b5bc699e"
+metafile = true
 
 [[files]]
 file = "datapacks/aerophys-defaults/data/aerophys/function/init.mcfunction"
@@ -77,10 +106,6 @@ file = "datapacks/aerophys-defaults/pack.mcmeta"
 hash = "b172879c5ed321ee8d23f4a86f24f14ea7643f0ade5b889e93b12328453d8b23"
 
 [[files]]
-file = "grep"
-hash = "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
-
-[[files]]
 file = "mods/absolute-kinematics.pw.toml"
 hash = "8c2d4c4611c6a9936af4fb747ae945eb53d024a8b584c415f52bdbf4a49e5119"
 metafile = true
@@ -106,6 +131,11 @@ hash = "9efd2467725934e660f256346950d4e10ca44f034475ce8909a29fe0790dd5cc"
 metafile = true
 
 [[files]]
+file = "mods/architectury-api.pw.toml"
+hash = "187eafde5974beee1263538b462b7b8fe2fc8948c5d413980d9796d55928580b"
+metafile = true
+
+[[files]]
 file = "mods/balm.pw.toml"
 hash = "7dba9a4a9894a6bbab3a8c7edcc718499297412247fc0e8ccebf75b760c85140"
 metafile = true
@@ -113,6 +143,16 @@ metafile = true
 [[files]]
 file = "mods/biomesize.pw.toml"
 hash = "f2707463a84b3da22e3b0bb89f702f5df944b9da49bd23e701982883d65a9977"
+metafile = true
+
+[[files]]
+file = "mods/chat-heads.pw.toml"
+hash = "80455b28c3010ad153ccabc2998cb445b9854b26b386628243a9c8160b8d7e8e"
+metafile = true
+
+[[files]]
+file = "mods/cloth-config.pw.toml"
+hash = "75181b55e0407d1fca1e2f346c6501f919f5109545990ddfb66db9cd1b771f8a"
 metafile = true
 
 [[files]]
@@ -126,6 +166,21 @@ hash = "3f99808dda6b83374cea1d478e2688c69af71a7381b176d0a7df50d219e44ca9"
 metafile = true
 
 [[files]]
+file = "mods/configured-defaults.pw.toml"
+hash = "edccf044df3d6519c3f8cb35e1044687d1b5bdc676fdce919d0844a4d2515685"
+metafile = true
+
+[[files]]
+file = "mods/controlify.pw.toml"
+hash = "2b61d5100f1db31c7928ba7de237c5f863926c49a4bf53fcce27bf0371ec0575"
+metafile = true
+
+[[files]]
+file = "mods/controlling.pw.toml"
+hash = "65c8086d2ec3d39acc7bd36c7a0306ccc43b602b38fa07d13291bc478ef7dfff"
+metafile = true
+
+[[files]]
 file = "mods/copycats+-aeronautics-weight.pw.toml"
 hash = "a1e68ec75524eb10a4522c27e3429a43c22861ac3c081686bd948a06bc4cfc91"
 metafile = true
@@ -133,6 +188,16 @@ metafile = true
 [[files]]
 file = "mods/copycats.pw.toml"
 hash = "e002fab16a9b9ef0a35844030339612a38d3c58b0b93e97a34eb43ddc9108be7"
+metafile = true
+
+[[files]]
+file = "mods/coroutil.pw.toml"
+hash = "d901f874a1e09747b8d0d072c38c426eceead1f29c8ba36680f8f0082996b152"
+metafile = true
+
+[[files]]
+file = "mods/cosmetic-armor-reworked.pw.toml"
+hash = "b65ee01fec17228645121952de6dec75053b0b4c59a8c8036d6fa7829819f3f9"
 metafile = true
 
 [[files]]
@@ -157,7 +222,7 @@ metafile = true
 
 [[files]]
 file = "mods/create-break-levitite.pw.toml"
-hash = "95f70f3504c362dfff5c6883e17c6c7cc2f7d64506d939a87764d18b3f85d36e"
+hash = "4ba7412f83bdf0a653842139cc8f8a6634c78a71999f98eb600f1a3fa6ffe21e"
 metafile = true
 
 [[files]]
@@ -221,18 +286,48 @@ hash = "9138f808e52f9e56180a15a15d9c882278ecf9f024783de18c2a90bad8e589be"
 metafile = true
 
 [[files]]
+file = "mods/emi.pw.toml"
+hash = "67bb77eae0b644960be3b1074178ceb5d54facbb42f326981b9d94625238a54a"
+metafile = true
+
+[[files]]
 file = "mods/euphoria-patches.pw.toml"
 hash = "c5bb130a9bc6f565c90f5ceeec03bee73a4eaae801a7e44364941dff8b8502d4"
 metafile = true
 
 [[files]]
 file = "mods/forgiving-void.pw.toml"
-hash = "b3e2786cd6d151651aa8ddc6548bc8e8bb7f67a10884f9570608ea11fc1197f6"
+hash = "ad797a4747adf0a547aff1f6bdb0c99d27b96324356fd0420fe9167e526d7185"
+metafile = true
+
+[[files]]
+file = "mods/ftb-chunks-forge.pw.toml"
+hash = "0922cfee3b7351e62fb22ccc6e5a59f35fd99fe80737dc861ada3b5407ecdf87"
+metafile = true
+
+[[files]]
+file = "mods/ftb-library-forge.pw.toml"
+hash = "276e79d919c3a698ab2881d784544b7e60bef69b43f44808353bb65d38633cb3"
+metafile = true
+
+[[files]]
+file = "mods/ftb-teams-forge.pw.toml"
+hash = "e717bb275a54a5caadaa7cf82bc34df3589f49402074adf93c31eaac43860313"
 metafile = true
 
 [[files]]
 file = "mods/globalpacks.pw.toml"
 hash = "a7f2ae8ea415e95ce1a3518b66edcaf124d8903ff9101d07331f7fec92b3400f"
+metafile = true
+
+[[files]]
+file = "mods/hysk-longhotbar.pw.toml"
+hash = "fd1ea86e7e11f12aa9dfc99c52592fa91067c6c95fdd108778443ad9e2d9f0c1"
+metafile = true
+
+[[files]]
+file = "mods/inventory-profiles-next.pw.toml"
+hash = "ab503e89461dff879ee793253e173625b6ab868f570a371323ef725e567cf5ea"
 metafile = true
 
 [[files]]
@@ -243,6 +338,31 @@ metafile = true
 [[files]]
 file = "mods/iris.pw.toml"
 hash = "db1c1e6382878b78e994dba1b9026935f8d1c5ca685c89d2437858e0a0dcab58"
+metafile = true
+
+[[files]]
+file = "mods/jade-sable-compat.pw.toml"
+hash = "bde194eaa5802d0800aa6f468744d79023aa208a5cb9bde8b70001f2a77b17fc"
+metafile = true
+
+[[files]]
+file = "mods/jade.pw.toml"
+hash = "b6e0a61fea06f8d6d8e1672cf07b682625c4b74efd548d5093cd9c1fed167eec"
+metafile = true
+
+[[files]]
+file = "mods/jei.pw.toml"
+hash = "1eb4094b466679316208fa85e5a855fc71945cfd639ff7f831586452b0cc3ad3"
+metafile = true
+
+[[files]]
+file = "mods/kotlin-for-forge.pw.toml"
+hash = "712a69b3569a8055979de6eea262068535fe182dffb3833e53e5833e9cbf9766"
+metafile = true
+
+[[files]]
+file = "mods/libipn.pw.toml"
+hash = "0d2a00252d64ed7d2d9b19994f7accb780304be61f3903d36e810714b414c6cb"
 metafile = true
 
 [[files]]
@@ -266,8 +386,18 @@ hash = "80ca00f588bd0531e5c5c37452aad65953cf67c7b8e0cf316dbdf35a507ff817"
 metafile = true
 
 [[files]]
+file = "mods/not-enough-animations.pw.toml"
+hash = "e92633222b9275744ba9ae7a90781494f67933924b56ea8287c5dc7553e77e17"
+metafile = true
+
+[[files]]
 file = "mods/papa-portable-aeronautics-physics-assembler.pw.toml"
 hash = "0937b82b7b1831ade5afe5e2a77ad4799567bdb2bc6c3de95178d74453343082"
+metafile = true
+
+[[files]]
+file = "mods/ping-wheel.pw.toml"
+hash = "650330109d21831664d2ff597c7a90200eda69a1efaca4e9b0b6b6297ac3c364"
 metafile = true
 
 [[files]]
@@ -326,6 +456,11 @@ hash = "7ad212e0b8fcdaac16e2646ad27e6d060ce54a8d763d446e756d98f61191c6fe"
 metafile = true
 
 [[files]]
+file = "mods/searchables.pw.toml"
+hash = "ce9ddada6ffd55a512149cc474c6a453281a997a5fdf1b7b4a2cc73f875e704a"
+metafile = true
+
+[[files]]
 file = "mods/simple-voice-chat.pw.toml"
 hash = "8eae737eb20a0488e9b57b6a59f0681d142732bcb22fc896ad4e5ff924ec5683"
 metafile = true
@@ -336,11 +471,31 @@ hash = "abc285fb28b8df872e4c2bb31e04fc23e2724d9c84b4cb6fbc4320fc569c758f"
 metafile = true
 
 [[files]]
+file = "mods/sound-physics-remastered.pw.toml"
+hash = "258a77de0a6db4c9ab045cbb240bcf4eac0dbbca3f6bc981fb461e55c247f23f"
+metafile = true
+
+[[files]]
 file = "mods/subborder.pw.toml"
 hash = "8e40316e6a120dcd0d4ebaf88b0ba26ba5d62d2ace8ebf09fb2c51977654ec4e"
 metafile = true
 
 [[files]]
-file = "shaderpacks/complementary-reimagined.pw.toml"
-hash = "ea258ed5bf495d9017eeadc3cbf9bd67b1e672d843826bc077135548b5bc699e"
+file = "mods/tool-belt.pw.toml"
+hash = "6e858314972147e4748f68e5ad8feb7039bfd8a885b952f9c3bf8d3a845e8dc9"
+metafile = true
+
+[[files]]
+file = "mods/what-are-they-up-to.pw.toml"
+hash = "9ce52d07c0c3d146a2a44f8bc187138ce7a5558a4e3ab540c86234702b6de274"
+metafile = true
+
+[[files]]
+file = "mods/yacl.pw.toml"
+hash = "539f362e9e192cf3b2813e0dfdfc51a5e6814129c6e82a9733842529beea6242"
+metafile = true
+
+[[files]]
+file = "mods/yeetus-experimentus.pw.toml"
+hash = "5e25dccab496945a5f19bb82383e0ebf98452ffc14cd25c7e0259cc44312281a"
 metafile = true
