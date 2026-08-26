@@ -9,6 +9,10 @@ file = "config/create_connected-common.toml"
 hash = "74ba0731b3d72575fc019d8380d3a3e93d4d88088722c1b815d080cc7db02f09"
 
 [[files]]
+file = "config/entity_texture_features.json"
+hash = "8e3da1ccfd17d7ad875bfcdfd8c2c881ba0c0593cfc31f085756edc205773f72"
+
+[[files]]
 file = "config/highseas-client.toml"
 hash = "d0509651bab65e8380c2a530b3b91130cb3266dd8e80837aa8a075582b1e3189"
 
@@ -106,6 +110,11 @@ file = "datapacks/aerophys-defaults/pack.mcmeta"
 hash = "b172879c5ed321ee8d23f4a86f24f14ea7643f0ade5b889e93b12328453d8b23"
 
 [[files]]
+file = "mods/3dskinlayers.pw.toml"
+hash = "82becc6910845ae1a68884e6f7a3dcdc861d79a087ae81b1d7e120e82884372d"
+metafile = true
+
+[[files]]
 file = "mods/absolute-kinematics.pw.toml"
 hash = "8c2d4c4611c6a9936af4fb747ae945eb53d024a8b584c415f52bdbf4a49e5119"
 metafile = true
@@ -153,6 +162,11 @@ metafile = true
 [[files]]
 file = "mods/cloth-config.pw.toml"
 hash = "75181b55e0407d1fca1e2f346c6501f919f5109545990ddfb66db9cd1b771f8a"
+metafile = true
+
+[[files]]
+file = "mods/clumps.pw.toml"
+hash = "2acaff560bbda5741538528a2967355ec86a8f7564adba0b2316989c66892374"
 metafile = true
 
 [[files]]
@@ -291,8 +305,18 @@ hash = "67bb77eae0b644960be3b1074178ceb5d54facbb42f326981b9d94625238a54a"
 metafile = true
 
 [[files]]
+file = "mods/entitytexturefeatures.pw.toml"
+hash = "265401deee25a3f254ea0c084f14d1e48086231e3f115eec8b60e00fdb0812d2"
+metafile = true
+
+[[files]]
 file = "mods/euphoria-patches.pw.toml"
 hash = "c5bb130a9bc6f565c90f5ceeec03bee73a4eaae801a7e44364941dff8b8502d4"
+metafile = true
+
+[[files]]
+file = "mods/ferrite-core.pw.toml"
+hash = "73360e397134d238ee8fd21d33fd7f9275e9441f74f8f1b6ed92278877c0b9f1"
 metafile = true
 
 [[files]]
