@@ -33,6 +33,10 @@ file = "configureddefaults/config/iris.properties"
 hash = "02d3f12ed8ab0949339764e22af3aaa2cf71904e5057c7c5efdfdd6e277cb901"
 
 [[files]]
+file = "configureddefaults/config/toolbelt-client.toml"
+hash = "097f6d7da2499f735e058eabcb2743929db2d9e3a3f34f8ab4447057cf497bbc"
+
+[[files]]
 file = "configureddefaults/options.txt"
 hash = "1ffd7dbb45759935e78027b5b392ffa07a8347dfd61ffdfd21f424bb77810e9d"
 
