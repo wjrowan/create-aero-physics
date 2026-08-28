@@ -21,12 +21,12 @@ file = "config/highseas-common.toml"
 hash = "8d995fc6fdd14082200a902a25a30992e536a73119a3cf6500c9c65b9a000bd6"
 
 [[files]]
-file = "config/sable_player_ragdoll-client.toml"
-hash = "2baee6f7a5607e323604607dd77f61d410596d38b7556be326a1a8da19513ec0"
-
-[[files]]
 file = "configureddefaults/config/DistantHorizons.toml"
 hash = "aab91e1cbb813017b5c0a62b405e8e9d9f7c7301b1e6afc79baa5a4945e228af"
+
+[[files]]
+file = "configureddefaults/config/firstperson.json"
+hash = "180c1ee3a7b47438e23ccaff829090205be6b0f47a3bd3ff67a202c63f864919"
 
 [[files]]
 file = "configureddefaults/config/ftbchunks-client.snbt"
@@ -35,6 +35,10 @@ hash = "d549ee175d7763fdc2140656c6bf61f0b5047f10d13f7b0e2b3b0004773d3602"
 [[files]]
 file = "configureddefaults/config/iris.properties"
 hash = "02d3f12ed8ab0949339764e22af3aaa2cf71904e5057c7c5efdfdd6e277cb901"
+
+[[files]]
+file = "configureddefaults/config/sable_player_ragdoll-client.toml"
+hash = "2baee6f7a5607e323604607dd77f61d410596d38b7556be326a1a8da19513ec0"
 
 [[files]]
 file = "configureddefaults/config/toolbelt-client.toml"
@@ -325,6 +329,11 @@ metafile = true
 [[files]]
 file = "mods/ferrite-core.pw.toml"
 hash = "73360e397134d238ee8fd21d33fd7f9275e9441f74f8f1b6ed92278877c0b9f1"
+metafile = true
+
+[[files]]
+file = "mods/first-person-model.pw.toml"
+hash = "4188848019233432861e98a5cc72aebed8c68a8a0909007967ab11827f8a6508"
 metafile = true
 
 [[files]]
