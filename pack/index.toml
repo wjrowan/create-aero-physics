@@ -22,7 +22,7 @@ hash = "8d995fc6fdd14082200a902a25a30992e536a73119a3cf6500c9c65b9a000bd6"
 
 [[files]]
 file = "configureddefaults/config/DistantHorizons.toml"
-hash = "995f0b22b4118949609d7b69f3851b2ad99271963c644189598df786a7ca53ee"
+hash = "aab91e1cbb813017b5c0a62b405e8e9d9f7c7301b1e6afc79baa5a4945e228af"
 
 [[files]]
 file = "configureddefaults/config/ftbchunks-client.snbt"
@@ -485,6 +485,11 @@ hash = "ce9ddada6ffd55a512149cc474c6a453281a997a5fdf1b7b4a2cc73f875e704a"
 metafile = true
 
 [[files]]
+file = "mods/shtreimel-sable-server-utility.pw.toml"
+hash = "b27aab605beadc60dd9a6d1582a78431185c5eb9ac7a970723beaeb737b57372"
+metafile = true
+
+[[files]]
 file = "mods/simple-voice-chat.pw.toml"
 hash = "8eae737eb20a0488e9b57b6a59f0681d142732bcb22fc896ad4e5ff924ec5683"
 metafile = true
@@ -497,6 +502,11 @@ metafile = true
 [[files]]
 file = "mods/sound-physics-remastered.pw.toml"
 hash = "258a77de0a6db4c9ab045cbb240bcf4eac0dbbca3f6bc981fb461e55c247f23f"
+metafile = true
+
+[[files]]
+file = "mods/spark.pw.toml"
+hash = "593fa7b30ab016aa45be07bd6bef3a9f160ed0f24689850d60bf84995d69b843"
 metafile = true
 
 [[files]]
