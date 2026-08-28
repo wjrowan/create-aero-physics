@@ -21,6 +21,10 @@ file = "config/highseas-common.toml"
 hash = "8d995fc6fdd14082200a902a25a30992e536a73119a3cf6500c9c65b9a000bd6"
 
 [[files]]
+file = "config/sable_player_ragdoll-client.toml"
+hash = "2baee6f7a5607e323604607dd77f61d410596d38b7556be326a1a8da19513ec0"
+
+[[files]]
 file = "configureddefaults/config/DistantHorizons.toml"
 hash = "aab91e1cbb813017b5c0a62b405e8e9d9f7c7301b1e6afc79baa5a4945e228af"
 
