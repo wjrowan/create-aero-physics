@@ -272,11 +272,6 @@ hash = "0ae5b9a5883e79282ad756ea205f3fa1af11ced75bb4ba5b74e3d32e1ea684c9"
 metafile = true
 
 [[files]]
-file = "mods/create-high-seas.pw.toml"
-hash = "d9c986deae70a8eeaacf3e9a6e2cf70df8db3fd411b4c8f4fb2df79e27963007"
-metafile = true
-
-[[files]]
 file = "mods/create-mob-spawners.pw.toml"
 hash = "ba6d9babe5ec9b683b620b391f13169b2d998ec1285d5291cf8ea49028a1445c"
 metafile = true
