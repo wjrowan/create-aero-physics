@@ -437,11 +437,6 @@ hash = "93284ca7f2f23f0bb76d42b797cabf2aea1914ee9825bec82bf6ffe4c60dda0d"
 metafile = true
 
 [[files]]
-file = "mods/porkchop-express.pw.toml"
-hash = "595695e735a37b5e50a6bf459f7849f54faa5c198c8985559d121b8fca9707c9"
-metafile = true
-
-[[files]]
 file = "mods/ragdoll-reactions.pw.toml"
 hash = "89bd0f15795c70a1e06074e22bc5d80969abd48e1f540c79e3023cf8be51bef9"
 metafile = true
