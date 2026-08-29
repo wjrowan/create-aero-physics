@@ -492,11 +492,6 @@ hash = "b9ceb0fa4707ced2e0467f334ce8b6cb2fd60c729b47aee065e2bb0d5b905189"
 metafile = true
 
 [[files]]
-file = "mods/sappy-tree-physics.pw.toml"
-hash = "7ad212e0b8fcdaac16e2646ad27e6d060ce54a8d763d446e756d98f61191c6fe"
-metafile = true
-
-[[files]]
 file = "mods/searchables.pw.toml"
 hash = "ce9ddada6ffd55a512149cc474c6a453281a997a5fdf1b7b4a2cc73f875e704a"
 metafile = true
