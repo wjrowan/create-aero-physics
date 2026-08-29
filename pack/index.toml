@@ -402,11 +402,6 @@ hash = "0d2a00252d64ed7d2d9b19994f7accb780304be61f3903d36e810714b414c6cb"
 metafile = true
 
 [[files]]
-file = "mods/linear-bearing.pw.toml"
-hash = "e92248ff7e47d94175ee315550946858967e9f1076653468a1d10a6aa53a4d82"
-metafile = true
-
-[[files]]
 file = "mods/moonlight.pw.toml"
 hash = "4e8c07523024ba37f1064f1dcc0c3dbb65996d4976a71dd30f239d3e6efbe096"
 metafile = true
