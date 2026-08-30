@@ -25,10 +25,6 @@ file = "configureddefaults/config/DistantHorizons.toml"
 hash = "aab91e1cbb813017b5c0a62b405e8e9d9f7c7301b1e6afc79baa5a4945e228af"
 
 [[files]]
-file = "configureddefaults/config/firstperson.json"
-hash = "180c1ee3a7b47438e23ccaff829090205be6b0f47a3bd3ff67a202c63f864919"
-
-[[files]]
 file = "configureddefaults/config/ftbchunks-client.snbt"
 hash = "d549ee175d7763fdc2140656c6bf61f0b5047f10d13f7b0e2b3b0004773d3602"
 
@@ -132,11 +128,6 @@ hash = "8c2d4c4611c6a9936af4fb747ae945eb53d024a8b584c415f52bdbf4a49e5119"
 metafile = true
 
 [[files]]
-file = "mods/almostunified.pw.toml"
-hash = "3805fe2877cffdae5e7bf74d85069a2535daa39a0f3ed766755be49294a07680"
-metafile = true
-
-[[files]]
 file = "mods/amendments.pw.toml"
 hash = "793e70a07961b1670ba13dcdfe2c1cfb1379df52485adc2d3ba5db128e9536a6"
 metafile = true
@@ -194,11 +185,6 @@ metafile = true
 [[files]]
 file = "mods/configured-defaults.pw.toml"
 hash = "edccf044df3d6519c3f8cb35e1044687d1b5bdc676fdce919d0844a4d2515685"
-metafile = true
-
-[[files]]
-file = "mods/controlify.pw.toml"
-hash = "e753411e53ae58f46754b5ef60e70af81a9ec6b5e31f99c47777cc59fbbc5fe4"
 metafile = true
 
 [[files]]
@@ -324,11 +310,6 @@ metafile = true
 [[files]]
 file = "mods/ferrite-core.pw.toml"
 hash = "73360e397134d238ee8fd21d33fd7f9275e9441f74f8f1b6ed92278877c0b9f1"
-metafile = true
-
-[[files]]
-file = "mods/first-person-model.pw.toml"
-hash = "4188848019233432861e98a5cc72aebed8c68a8a0909007967ab11827f8a6508"
 metafile = true
 
 [[files]]
@@ -519,11 +500,6 @@ metafile = true
 [[files]]
 file = "mods/what-are-they-up-to.pw.toml"
 hash = "9ce52d07c0c3d146a2a44f8bc187138ce7a5558a4e3ab540c86234702b6de274"
-metafile = true
-
-[[files]]
-file = "mods/yacl.pw.toml"
-hash = "1f47c89af2b4c6ab92735d68e58412d0b369f7035818e58d02f5982f7fc1186a"
 metafile = true
 
 [[files]]
