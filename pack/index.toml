@@ -13,14 +13,6 @@ file = "config/entity_texture_features.json"
 hash = "8e3da1ccfd17d7ad875bfcdfd8c2c881ba0c0593cfc31f085756edc205773f72"
 
 [[files]]
-file = "config/highseas-client.toml"
-hash = "d0509651bab65e8380c2a530b3b91130cb3266dd8e80837aa8a075582b1e3189"
-
-[[files]]
-file = "config/highseas-common.toml"
-hash = "8d995fc6fdd14082200a902a25a30992e536a73119a3cf6500c9c65b9a000bd6"
-
-[[files]]
 file = "configureddefaults/config/DistantHorizons.toml"
 hash = "aab91e1cbb813017b5c0a62b405e8e9d9f7c7301b1e6afc79baa5a4945e228af"
 
