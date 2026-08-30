@@ -1,5 +1,9 @@
 # aerophys server — operator runbook
 
+# Run commands
+
+~> sudo ~/Source/create-aero-physics/server/start.sh
+
 Read this before you touch the server at 1am. Full reasoning lives in
 `docs/phase-9-server-ops.md`; this is the condensed version for incidents.
 
