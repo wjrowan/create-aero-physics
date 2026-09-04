@@ -13,12 +13,16 @@ file = "config/entity_texture_features.json"
 hash = "8e3da1ccfd17d7ad875bfcdfd8c2c881ba0c0593cfc31f085756edc205773f72"
 
 [[files]]
+file = "config/ftbchunks-world.snbt"
+hash = "05630cb96ae94257e2ffe1ee29f08b443aeec337ccbe71603d7b3fc5d3abaf91"
+
+[[files]]
 file = "configureddefaults/config/DistantHorizons.toml"
 hash = "aab91e1cbb813017b5c0a62b405e8e9d9f7c7301b1e6afc79baa5a4945e228af"
 
 [[files]]
-file = "configureddefaults/config/ftbchunks-client.snbt"
-hash = "d549ee175d7763fdc2140656c6bf61f0b5047f10d13f7b0e2b3b0004773d3602"
+file = "configureddefaults/config/ftbchunks-world.snbt"
+hash = "b87e50a2dfb9c4a4926cb4d828a77c592b1c30d31a681153685d36c54b18d73c"
 
 [[files]]
 file = "configureddefaults/config/iris.properties"
@@ -31,6 +35,10 @@ hash = "2baee6f7a5607e323604607dd77f61d410596d38b7556be326a1a8da19513ec0"
 [[files]]
 file = "configureddefaults/config/toolbelt-client.toml"
 hash = "097f6d7da2499f735e058eabcb2743929db2d9e3a3f34f8ab4447057cf497bbc"
+
+[[files]]
+file = "configureddefaults/inventoryprofilesnext/inventoryprofiles.json"
+hash = "9c72f5fc6fd8e7e35ea0e580df80261eda07b18d5437d95e05254f58cba5d10b"
 
 [[files]]
 file = "configureddefaults/options.txt"
