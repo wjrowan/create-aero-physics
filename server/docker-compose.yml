@@ -1,0 +1,173 @@
+# Create Aeronautics Physics Server — production container
+# Lives at: server/docker-compose.yml
+# Companion: server/.env  (copy from .env.example, never committed)
+#
+# Start:    docker compose up -d
+# Console:  docker compose attach mc        (Ctrl-P Ctrl-Q to detach)
+# Logs:     docker compose logs -f mc
+# Stop:     docker compose stop mc          (allow up to 5 minutes)
+
+name: aerophys
+
+services:
+
+  mc:
+    # PINNED. Dated release tag + Java 21. Never `latest`, never `stable`.
+    # After the first pull, append the digest and commit it:
+    #   docker image inspect --format='{{index .RepoDigests 0}}' \
+    #     itzg/minecraft-server:2026.8.2-java21
+    # -> image: itzg/minecraft-server:2026.8.2-java21@sha256:<digest>
+    image: itzg/minecraft-server:2026.8.2-java21@sha256:41041d799cee7743867f9a25bf12f2deeeb5a2392f3e4433d188cac4ad5e1e3a
+    # No pull_policy. The default (`missing`) is what keeps the freeze honest.
+    container_name: aerophys-mc
+    restart: unless-stopped
+
+    # THE MOST IMPORTANT LINE IN THIS FILE.
+    # Docker's default is 10s then SIGKILL. This world does not finish saving
+    # in 10 seconds, and SIGKILL mid-save corrupts region files.
+    stop_grace_period: 5m
+
+    tty: true
+    stdin_open: true
+
+    ports:
+      - "25565:25565/tcp"        # game
+      - "24454:24454/udp"        # Simple Voice Chat — UDP, not TCP. Not optional.
+      # RCON (25575) is deliberately NOT published. Compose network only.
+
+    environment:
+      EULA: "TRUE"
+      TZ: "${TZ}"
+
+      # ---- platform, pinned ------------------------------------------------
+      TYPE: "NEOFORGE"
+      VERSION: "1.21.1"
+      NEOFORGE_VERSION: "${NEOFORGE_VERSION}"   # exact 21.1.x from pack/pack.toml
+
+      # ---- the pack: one source of truth, same URL the clients use ---------
+      PACKWIZ_URL: "${PACKWIZ_URL}"
+
+      # ---- memory ----------------------------------------------------------
+      # INIT == MAX deliberately. See phase 9 §7.4.
+      INIT_MEMORY: "${HEAP}"
+      MAX_MEMORY: "${HEAP}"
+      USE_AIKAR_FLAGS: "true"
+      JVM_XX_OPTS: "${JVM_XX_OPTS}"            # empty by default; ZGC swap-in point
+
+      # ---- the two settings that stop the server killing itself ------------
+      MAX_TICK_TIME: "-1"        # vanilla watchdog kills at 60s. This pack plans
+                                 # long ticks. A stall must stay a stall.
+      SYNC_CHUNK_WRITES: "false" # chunk saving off the main tick thread
+
+      # ---- world -----------------------------------------------------------
+      LEVEL: "world"
+      LEVEL_TYPE: "minecraft:normal"
+      MODE: "survival"
+      DIFFICULTY: "normal"
+      VIEW_DISTANCE: "${VIEW_DISTANCE}"
+      SIMULATION_DISTANCE: "${SIMULATION_DISTANCE}"
+
+      # ---- pack-specific requirements --------------------------------------
+      ALLOW_FLIGHT: "TRUE"       # riding a Sable contraption trips the vanilla
+                                 # flight check. Leave false = random kicks.
+      SPAWN_PROTECTION: "0"      # friends are not ops; without this they cannot
+                                 # build near spawn.
+      MAX_PLAYERS: "8"
+
+      # ---- access ----------------------------------------------------------
+      ENABLE_WHITELIST: "true"
+      ENFORCE_WHITELIST: "true"
+      WHITELIST: |
+        WinningWilliam
+        MajorMaxiMan
+        TotallyTom
+        Gondorsbanejr
+      OPS: |
+        WinningWilliam
+      # Deliberate: friends are NOT ops. Shtreimel's delete is op 3.
+
+      # ---- rcon: needed by the backup sidecar, never exposed ----------------
+      RCON_PASSWORD_FILE: /run/secrets/rcon_password
+
+      # ---- diagnostics -----------------------------------------------------
+      DUMP_SERVER_PROPERTIES: "true"
+
+    # DEV-ONLY: lets the container reach `packwiz serve` running on the host,
+    # for local pack-source testing without pushing to GitHub. Production
+    # must use the GitHub-hosted PACKWIZ_URL — a container that depends on a
+    # terminal session on someone's desktop is not a server.
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+
+    volumes:
+      # Disposable. Rebuilt from PACKWIZ_URL + these env vars on every start.
+      - mc-data:/data
+      # IRREPLACEABLE. Named volume, never a Windows bind mount (WSL2 I/O).
+      # Nested mount: Docker resolves by path depth, so this shadows mc-data.
+      - mc-world:/data/world
+      # Tier C jars. Currently empty and expected to stay that way.
+      - ../manual:/mods:ro
+      - /etc/localtime:/etc/localtime:ro
+
+    secrets:
+      - rcon_password
+
+    deploy:
+      resources:
+        limits:
+          # MUST exceed HEAP by several GB: Rapier allocates native memory
+          # outside the Java heap. limit == heap is how you get OOM-killed
+          # with a heap that looks healthy.
+          memory: ${MEM_LIMIT}
+          # cpus: "${CPU_LIMIT}"   # uncomment only if the host is shared
+
+  backup:
+    # Pin this too. Confirm the tag exists on Docker Hub before committing.
+    image: itzg/mc-backup:2026.8.2@sha256:cef928637262946c4988d7128eb3e17dcabc399e22b9c1e9d0297de86949a1cf
+    container_name: aerophys-backup
+    restart: unless-stopped
+    depends_on:
+      - mc
+
+    environment:
+      TZ: "${TZ}"
+      RCON_HOST: "mc"
+      RCON_PASSWORD_FILE: /run/secrets/rcon_password
+
+      BACKUP_NAME: "aerophys"
+      BACKUP_METHOD: "tar"
+      TAR_COMPRESS_METHOD: "zstd"
+      LINK_LATEST: "true"
+
+      # Cron overrides interval scheduling entirely. Daily 05:00 local.
+      CRON_SCHEDULE: "0 5 * * *"
+      CRON_BACKUP_UID: "1000"
+
+      # One irreplaceable world: 30 days AND a count floor, so a burst of
+      # manual backups during an update cannot evict the daily history.
+      PRUNE_BACKUPS_DAYS: "30"
+      PRUNE_BACKUPS_COUNT: "40"
+
+      # Everything reproducible from the manifest, plus the DH LOD store,
+      # which is derived data and can be very large. Losing it costs a
+      # re-pregen, not a world.
+      EXCLUDES: "*.jar,cache,logs,crash-reports,*.tmp,libraries,mods,DistantHorizons.sqlite*"
+
+    volumes:
+      - mc-data:/data:ro
+      - mc-world:/data/world:ro
+      - "${BACKUP_DIR}:/backups"        # bind mount: sequential writes tolerate
+                                        # the Windows boundary, and you can see
+                                        # the files from Explorer
+      - /etc/localtime:/etc/localtime:ro
+
+    secrets:
+      - rcon_password
+
+secrets:
+  rcon_password:
+    file: ./rcon_password               # gitignored. printf '%s' 'pw' > rcon_password
+
+volumes:
+  mc-data:
+  mc-world:
