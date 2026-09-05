@@ -13,6 +13,10 @@ file = "config/entity_texture_features.json"
 hash = "8e3da1ccfd17d7ad875bfcdfd8c2c881ba0c0593cfc31f085756edc205773f72"
 
 [[files]]
+file = "config/euphoria_patcher/settings.toml"
+hash = "41879b05e0754a490c35249045baecc9ee5fac866eac14324130f14075305e24"
+
+[[files]]
 file = "config/ftbchunks-world.snbt"
 hash = "05630cb96ae94257e2ffe1ee29f08b443aeec337ccbe71603d7b3fc5d3abaf91"
 
