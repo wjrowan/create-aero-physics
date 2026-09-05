@@ -9,7 +9,8 @@
 
 	# Option that enables or disables the in-game shader messages, for example an update message made by the shader itself. Only works on Iris or Oculus
 	# Default = true
-	# PACK OVERRIDE: disabled.
+	# PACK DEFAULT: disabled (shipped via configureddefaults; safe to edit or
+	# delete this file if you want the stock behaviour back).
 	# The in-shader update message pastes the version number in as per-character
 	# glyph identifiers (_1, _dot, _9 ...). The glyph table in
 	# lib/textRendering/textRenderer.glsl only defines _0.._9, so a version with a
@@ -22,7 +23,7 @@
 	# Update checker mode: 'important' (critical or big updates only), 'all' (all updates), 'none' (disabled).
 	# Uses the Modrinth API to fetch update information.
 	# Default = important
-	# PACK OVERRIDE: "none".
+	# PACK DEFAULT: "none".
 	# Mod versions are pinned by packwiz, so the update nag is noise -- and the
 	# update check is what feeds the broken version string into the in-shader
 	# message above. See doDisplayShaderInGameMessage.
