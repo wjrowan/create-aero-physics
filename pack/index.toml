@@ -18,7 +18,7 @@ hash = "05630cb96ae94257e2ffe1ee29f08b443aeec337ccbe71603d7b3fc5d3abaf91"
 
 [[files]]
 file = "configureddefaults/config/DistantHorizons.toml"
-hash = "aab91e1cbb813017b5c0a62b405e8e9d9f7c7301b1e6afc79baa5a4945e228af"
+hash = "a509867c17d87132ba729b56d2469615190f379cd38b0657b7f8d1fd990e1c7e"
 
 [[files]]
 file = "configureddefaults/config/ftbchunks-world.snbt"
@@ -125,6 +125,16 @@ metafile = true
 [[files]]
 file = "mods/absolute-kinematics.pw.toml"
 hash = "8c2d4c4611c6a9936af4fb747ae945eb53d024a8b584c415f52bdbf4a49e5119"
+metafile = true
+
+[[files]]
+file = "mods/aero_cam_sync.pw.toml"
+hash = "05d7fc1975485e44ed23c67f33d4f691523da2bacef29464f04433154929e6f8"
+metafile = true
+
+[[files]]
+file = "mods/aeronautics-player-tilt.pw.toml"
+hash = "e8e97a1b7ff511a445fb659c1c6d81e0fe322a25f60d7c4359de067496f78475"
 metafile = true
 
 [[files]]
@@ -440,6 +450,11 @@ metafile = true
 [[files]]
 file = "mods/sable-ragdolls.pw.toml"
 hash = "bf3c84eff52457596d58a73882e72759804117f0731a0fde343cfd54d33e55ba"
+metafile = true
+
+[[files]]
+file = "mods/sable-sure-footing.pw.toml"
+hash = "27baa699ff025d9c84da6019dd2899c2e8f429395b16b0e109d11f535add22b7"
 metafile = true
 
 [[files]]
