@@ -284,6 +284,11 @@ hash = "0ae5b9a5883e79282ad756ea205f3fa1af11ced75bb4ba5b74e3d32e1ea684c9"
 metafile = true
 
 [[files]]
+file = "mods/create-lift-n-load.pw.toml"
+hash = "77fe9aeb9f970359adfbe2b929ffc65b595dd5dbe48bc164c04601bbd19322fa"
+metafile = true
+
+[[files]]
 file = "mods/create-mob-spawners.pw.toml"
 hash = "ba6d9babe5ec9b683b620b391f13169b2d998ec1285d5291cf8ea49028a1445c"
 metafile = true
@@ -536,4 +541,9 @@ metafile = true
 [[files]]
 file = "mods/yeetus-experimentus.pw.toml"
 hash = "5e25dccab496945a5f19bb82383e0ebf98452ffc14cd25c7e0259cc44312281a"
+metafile = true
+
+[[files]]
+file = "swinuras-aeronautica-bed-fix.pw.toml"
+hash = "75d030bbef02f064e980af246ac48ce7e8b842bbfbc8ef6028382e67c504b9dd"
 metafile = true
