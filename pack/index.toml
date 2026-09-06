@@ -29,12 +29,20 @@ file = "config/ftbchunks-world.snbt"
 hash = "05630cb96ae94257e2ffe1ee29f08b443aeec337ccbe71603d7b3fc5d3abaf91"
 
 [[files]]
+file = "config/toolbelt-server.toml"
+hash = "a577cfcdc96f8619aa43d4192ca3e9519ec06584a825c4ec51ee15fcab927015"
+
+[[files]]
 file = "configureddefaults/config/DistantHorizons.toml"
 hash = "a509867c17d87132ba729b56d2469615190f379cd38b0657b7f8d1fd990e1c7e"
 
 [[files]]
 file = "configureddefaults/config/euphoria_patcher/settings.toml"
 hash = "193ca955131b5edcaaf2ed746f7095b3c154ec5063ff69750e5c5c8f47d368ae"
+
+[[files]]
+file = "configureddefaults/config/ftbchunks-client.snbt"
+hash = "a056077c79a708c2f694f545015ecdb2c1b456d1c55f8bb462bccf89935d02cf"
 
 [[files]]
 file = "configureddefaults/config/ftbchunks-world.snbt"
