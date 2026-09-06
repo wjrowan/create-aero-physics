@@ -1,6 +1,18 @@
 hash-format = "sha256"
 
 [[files]]
+file = "config/aero_cam_sync-client.toml"
+hash = "43c766c084c6919984fbc5975c47e8565297781dd7f661503f59829cd3fc00fb"
+
+[[files]]
+file = "config/aero_player_tilt-client.toml"
+hash = "12b8565b2b2dd4446717447edb19cbcd18b35e5165db0f29d0449a668183530e"
+
+[[files]]
+file = "config/aero_player_tilt-server.toml"
+hash = "56c09fbee3772f4a15e8bb145e5369e1b38d4d0a81e0449d73f95ede8598a881"
+
+[[files]]
 file = "config/biomesize.json"
 hash = "83f8df75a9d0ea58642d712dc8dc2c817b3e7729d94ee55a1c7ad348d397217d"
 
