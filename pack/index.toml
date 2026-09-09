@@ -353,7 +353,7 @@ metafile = true
 
 [[files]]
 file = "mods/fasterladderclimbing.pw.toml"
-hash = "4d2dbeebd4751fb5f6372a73081b76de93657780b09ca4b06947bf728d7306ef"
+hash = "dc7c442a1c545eb95495440b311b6fe1abab1c85796fc4430fb8eb8ed0535bae"
 metafile = true
 
 [[files]]
