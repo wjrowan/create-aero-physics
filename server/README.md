@@ -2,7 +2,7 @@
 
 # Run commands
 
-~> sudo ~/Source/create-aero-physics/server/start.sh
+~> ~/Source/create-aero-physics/server/start.sh
 
 Read this before you touch the server at 1am. Full reasoning lives in
 `docs/phase-9-server-ops.md`; this is the condensed version for incidents.
@@ -132,6 +132,79 @@ come back from `PACKWIZ_URL`; the world comes back from the backup;
 what stops git rewriting line endings and breaking packwiz hashes. Don't
 remove it because "the server is Linux now" — it may still be cloned on
 Windows.
+
+---
+
+## Exposing the server to the internet
+
+No prior phase designed this — Phase 9 shipped the container and stopped at
+the host's own network. Written up here on the first attempt to let friends
+in from outside.
+
+Run `./net-check.sh` before touching the router. It walks the chain from the
+inside out and stops at the first break. **A red rung below the router means
+the router is not your problem yet.**
+
+### Two rules, and one of them is UDP
+
+| Protocol | External | Internal | What breaks without it |
+|---|---|---|---|
+| **TCP** | 25565 | 192.168.3.55:25565 | nobody connects at all |
+| **UDP** | 24454 | 192.168.3.55:24454 | game works, voice silently doesn't |
+
+Router UIs default new rules to TCP, or to "TCP/UDP both" — either is a trap.
+Create them as two separate rules and read the protocol column back after
+saving. See "Simple Voice Chat" below; a missing UDP mapping presents as a
+not-connected voice icon on an otherwise healthy server.
+
+### Pin the address first
+
+The host currently holds `192.168.3.55` as an ordinary DHCP lease
+(`ipv4.method=auto`), not a reservation. A forward that targets `.55` works
+until the lease moves, then fails with no log entry anywhere — the classic
+"it worked last week" failure.
+
+In the router at `192.168.3.1`, add a DHCP reservation binding
+`192.168.3.55` to MAC `44:38:E8:5F:A7:94`, then reboot the host and confirm
+it comes back on `.55`. Do the reservation at the router, not a static IP on
+the host: one source of truth, no chance of handing the same address to a
+phone.
+
+**This MAC is the Wi-Fi adapter** (`wlp130s0f0`). The wired port
+(`enp129s0`) is currently down and has a different MAC. If this ever moves to
+ethernet — which it should, a server on Wi-Fi is a server with a jitter
+problem — the reservation and the forward both need redoing against the new
+MAC.
+
+### You cannot test this from inside your own house
+
+The single most common false alarm. Many routers do not implement NAT
+loopback (hairpin NAT): a packet from inside the LAN addressed to your own
+public IP is dropped rather than bent back inside. So from any machine on
+this network, connecting to the public address fails **even when the forward
+is perfectly configured**, while a friend outside connects fine.
+
+- From home, always connect to `192.168.3.55:25565`.
+- To test the public path, use a phone on mobile data with Wi-Fi **off**, or
+  a friend. Nothing else proves anything.
+
+### The address moves
+
+The public address (`103.115.189.207` at time of writing) is a residential
+dynamic allocation and will change — on a modem reboot, on an ISP outage, or
+on no visible trigger at all. Handing friends a bare IP means re-handing it
+every few weeks.
+
+Fix it with dynamic DNS, so they get one name that always resolves. Check
+the router's DDNS page first; if it has built-in No-IP or DynDNS support,
+use that — it updates from the device that actually knows the WAN address,
+and survives this host being off. Only if the router has no DDNS client does
+it become a job for a systemd timer here.
+
+### Gate
+
+Not "the container started." A friend outside the LAN joins, and their voice
+chat icon shows connected.
 
 ---
 
