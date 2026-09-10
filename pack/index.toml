@@ -17,6 +17,10 @@ file = "config/biomesize.json"
 hash = "83f8df75a9d0ea58642d712dc8dc2c817b3e7729d94ee55a1c7ad348d397217d"
 
 [[files]]
+file = "config/contraptionlights-client.toml"
+hash = "8ef5b069a2e17d988652da8f1b497a7f27e2cf5c714ac45ed580f221f3a39de5"
+
+[[files]]
 file = "config/create_connected-common.toml"
 hash = "74ba0731b3d72575fc019d8380d3a3e93d4d88088722c1b815d080cc7db02f09"
 
