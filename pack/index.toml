@@ -182,6 +182,11 @@ hash = "187eafde5974beee1263538b462b7b8fe2fc8948c5d413980d9796d55928580b"
 metafile = true
 
 [[files]]
+file = "mods/azimuth-api.pw.toml"
+hash = "382d7eb9e95beb4224fdb16e6781604c0f12d49ba3b900b323b1cb0ffabec13a"
+metafile = true
+
+[[files]]
 file = "mods/balm.pw.toml"
 hash = "7dba9a4a9894a6bbab3a8c7edcc718499297412247fc0e8ccebf75b760c85140"
 metafile = true
@@ -189,6 +194,11 @@ metafile = true
 [[files]]
 file = "mods/biomesize.pw.toml"
 hash = "f2707463a84b3da22e3b0bb89f702f5df944b9da49bd23e701982883d65a9977"
+metafile = true
+
+[[files]]
+file = "mods/carbon-config.pw.toml"
+hash = "5d9c4167ef4c04142844bf3b43252f1b6bed5eefaae2a0e101b7c9172316e774"
 metafile = true
 
 [[files]]
@@ -219,6 +229,11 @@ metafile = true
 [[files]]
 file = "mods/configured-defaults.pw.toml"
 hash = "edccf044df3d6519c3f8cb35e1044687d1b5bdc676fdce919d0844a4d2515685"
+metafile = true
+
+[[files]]
+file = "mods/contraption-lights.pw.toml"
+hash = "3f63a6610dc812365f35b1309f664bc2d6bd059157fcb79247da4044ad3f35a9"
 metafile = true
 
 [[files]]
@@ -267,6 +282,16 @@ hash = "8bc79b14b3fa74bbb49550cf543a1f4b6303e8e09c1f73125a022783e9d02711"
 metafile = true
 
 [[files]]
+file = "mods/create-bits-n-bobs.pw.toml"
+hash = "4930d2adc5440081d3c26446f3234e706790ec4fc8c408755ead1eb8677eb366"
+metafile = true
+
+[[files]]
+file = "mods/create-bits-n-dyes.pw.toml"
+hash = "345981c2a38d2f77002392d3364e716fdc15618ec71014e993e6924fb06ca1eb"
+metafile = true
+
+[[files]]
 file = "mods/create-break-levitite.pw.toml"
 hash = "4ba7412f83bdf0a653842139cc8f8a6634c78a71999f98eb600f1a3fa6ffe21e"
 metafile = true
@@ -284,6 +309,11 @@ metafile = true
 [[files]]
 file = "mods/create-dragons-plus.pw.toml"
 hash = "80547db2ebfc71d0d649534fe6fee7dabcf2a58770e8ff38218f6db874382204"
+metafile = true
+
+[[files]]
+file = "mods/create-droneworks-simulated.pw.toml"
+hash = "f8af9277f307db54a20d1eb432e5a29aa39cf7acaf0d2e051644743de22b74d8"
 metafile = true
 
 [[files]]
@@ -539,6 +569,11 @@ metafile = true
 [[files]]
 file = "mods/spark.pw.toml"
 hash = "593fa7b30ab016aa45be07bd6bef3a9f160ed0f24689850d60bf84995d69b843"
+metafile = true
+
+[[files]]
+file = "mods/strut-your-stuff.pw.toml"
+hash = "aa89e067824ca42d818a81a6d02ce5296ce662d834c35dd2ff0d81189d3bc3f9"
 metafile = true
 
 [[files]]
