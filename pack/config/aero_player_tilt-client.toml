@@ -1,0 +1,428 @@
+#Config schema version. Do not edit manually.
+#Used to detect when a config reset prompt should be shown.
+# Default: 0
+# Range: > 0
+configSchemaVersion = 7
+
+#What the tilt is, and when it is allowed to exist at all.
+[general]
+	#The whole mod. Off leaves plain Sable behaviour.
+	enabled = true
+	#Tilt the player's body along with the contraption.
+	#Rotates the model, the collision box and the movement/jump basis, so a tilted
+	#1-wide gap can actually be walked through. Other players see the tilt only when
+	#the mod is installed on the server.
+	playerTilt = true
+	#Maximum tilt threshold (0.0 - 1.0): the minimum Y of a deck normal that still
+	#counts as walkable. Surfaces steeper than this are never tilted onto, and a tilt
+	#the ship rotates past this limit is dropped instead of held - so the player falls
+	#off a near-vertical surface the way they do in plain Sable.
+	#
+	#Yours only: it shapes the tilt YOUR client computes, and that finished tilt
+	#is what everyone else is sent, so nobody has to share the setting to agree
+	#about the result. Mobs and items are the other way round and take the
+	#world's entityMinNormalY instead; this value stands in for it only when
+	#the server does not have the mod.
+	# Default: 0.8
+	# Range: 0.0 ~ 1.0
+	minNormalY = 0.8
+	#Which way you fall while airborne over a leaning deck.
+	#
+	#WORLD - the world's own down, which is what you get without this mod. A jump
+	#leaves along the deck's normal and nothing ever brings it back, so you land
+	#downhill of where you took off: roughly
+	#4.4*sin*cos blocks, which is 0.75 at 10 degrees, 1.4 at 20, 1.9 at 30. That is
+	#geometry, not a bug - under world gravity, leaving along the deck and landing
+	#on the same spot cannot both hold.
+	#
+	#DECK - the deck's down. The whole flight happens in the deck's frame, so a
+	#jump looks vertical on a tilted screen AND puts you back where you started,
+	#the way it does on flat ground. Covers every flight over the deck, not only
+	#jumps: a step off a ledge and a block broken underfoot are the same flight,
+	#and having one of them behave differently is what reads as a bug. The
+	#default.
+	#Allowed Values: WORLD, DECK
+	deckGravity = "DECK"
+	#Scale the finished tilt instead of matching the deck exactly. Applied at the
+	#very end, so the model, the collision box, the movement basis and everyone
+	#else's copy all see the same scaled tilt. Off means a plain multiplier of 1.
+	useTiltMultiplier = false
+	#1.0 leans with the floor, 0.5 halfway, 0.0 stays upright.
+	#Ignored while useTiltMultiplier is off.
+	# Default: 0.5
+	# Range: 0.0 ~ 1.0
+	tiltMultiplier = 0.5
+	#Toggle mod keybind. Not I: Aeronautics Camera Sync's own toggle is
+	#bound there, and one press would flip both mods at once.
+	toggleKey = "key.keyboard.unknown"
+	#Open config screen keybind
+	openConfigKey = "key.keyboard.unknown"
+
+#How the tilt travels: how fast it follows the floor, and how long it is held
+#on to when the floor goes missing.
+[motion]
+	#Body tilt interpolation half-life, in ticks (0.0 = instant snap, 9999 = never moves).
+	#Smoothing is measured in the deck's own frame, so a rotating sub-level does not
+	#make the body lag behind it - only real changes (stepping on/off the deck,
+	#walking onto a ramp) are eased.
+	# Default: 1.7
+	# Range: 0.0 ~ 9999.0
+	smoothSpeed = 1.7
+	#Half-life, in ticks, of the tilt STRAIGHTENING back to vertical: the player left
+	#the deck, or the surface under his feet stopped being walkable. Same units as
+	#smoothSpeed (0.0 = instant snap), but separate, because the two are wanted at
+	#different speeds: settling onto a deck should be quick enough to feel attached,
+	#while getting off it looks better as a slow, deliberate straightening.
+	#Switching from one sub-level to another is NOT this - that eases at smoothSpeed,
+	#since the body goes straight from one deck's normal to the other's.
+	# Default: 4.0
+	# Range: 0.0 ~ 9999.0
+	smoothSpeedExit = 4.0
+	#How long, in ticks, the CAMERA takes to slide onto the body when this mod takes
+	#the camera over from Aeronautics Camera Sync's own tilt.
+	#
+	#Only one of the two is steering at a time. While we are, ACS is handed our
+	#rotation and keeps it, so letting go is seamless - it simply carries on from
+	#where we left it. Taking over is not: ACS works the deck out for itself on the
+	#frames we say nothing, and the moment we speak up its value is replaced by ours,
+	#whatever the two happen to be. Land on a steep deck after a fall and those are
+	#far apart - the body is still upright and only starting to turn, while the camera
+	#has been leaning with the floor it was falling towards - so the whole difference
+	#is spent in one frame. That is the jolt on touchdown, and why stepping off the
+	#same deck is smooth.
+	#
+	#So the hand-over is walked instead: the camera keeps the rotation it had and
+	#arrives on the body's over this many ticks, along the same smoothstep a predicted
+	#landing is flown on - it leaves gently and comes to rest, rather than trailing a
+	#fraction of a degree behind long after the body has settled. Costs those few
+	#ticks where the camera is not exactly the body's eye - which is also where aim
+	#comes from, so it is deliberately short.
+	#0.0 = take the camera the instant we claim it, jolt and all.
+	# Default: 4.0
+	# Range: 0.0 ~ 40.0
+	takeoverTicks = 4.0
+	#Half-life, in ticks, of OTHER players' tilt as this client draws it.
+	#
+	#A body works its own tilt out every frame, but what reaches everyone else is
+	#a 20 Hz sample of it, arriving on the network's schedule rather than on the
+	#viewer's ticks. Drawn as it arrives, a tick with no packet freezes the body
+	#and the next one moves it twice as far - which is unnoticeable standing
+	#still and is the entire motion when someone crosses from one sub-level to
+	#another, where the whole swing takes a handful of ticks.
+	#
+	#So the reported value is followed on the frame clock instead, the same way
+	#smoothSpeed follows the floor. Measured in the deck's own frame, so a
+	#rotating sub-level is still tracked exactly. Costs that half-life in extra
+	#lag behind what the sender is doing, which for a lean nobody can see.
+	#0.0 = off: draw each value the moment it arrives, steps and all.
+	# Default: 1.5
+	# Range: 0.0 ~ 9999.0
+	remoteSmoothSpeed = 1.5
+	#How long, in ticks, a tilt is kept after the ground under it stops answering -
+	#a seam between two plots, a step, a ray that missed. Long enough to bridge
+	#those, short enough that a body which really has left its floor does not stay
+	#leaning. 0.0 = straighten the moment the floor is lost.
+	# Default: 5.0
+	# Range: 0.0 ~ 200.0
+	holdTicks = 5.0
+	#The same budget, but for a jump that still has its deck underneath it. A
+	#flight is not a body that lost its floor - it is coming back down onto it -
+	#so straightening in mid-air is exactly what nobody wants to see. Only applies
+	#while predictLanding is on; without it a jump is held by holdTicks like
+	#anything else.
+	# Default: 60.0
+	# Range: 0.0 ~ 400.0
+	airborneHoldTicks = 60.0
+	#Count a body walking along a deck as standing on it, even on the ticks its boots
+	#are a finger's width clear of the floor.
+	#
+	#A body can step UP what its step height allows and cannot step DOWN anything at
+	#all - it walks off the edge and falls. On flat ground that is invisible, because
+	#the next step lands at the same height. On a deck leaning thirty degrees every
+	#stride does it: the floor drops away under the boots, the body falls a tick,
+	#catches it, and leaves again - never two ticks on the ground together.
+	#
+	#Half the ticks airborne is half the ticks at air drag instead of ground friction,
+	#so the body accelerates like something thrown rather than something walking,
+	#footsteps stop and the controls go vague. That is what sliding across a deck after
+	#a landing actually is: not a body sliding on it, a body touching it every other
+	#tick.
+	#
+	#This changes nothing about where the body IS - it is not moved, pulled down or
+	#slowed - only whether the game counts it as standing. It rides the last tenth of a
+	#block above the deck, which nobody can see, and is moved at walking friction,
+	#which everybody can feel. A ray still has to find deck within one step below, so
+	#walking off a real edge falls the way it always did.
+	#
+	stickToDeck = true
+	#Turn with a sub-level that spins under your feet, so you keep facing the same way
+	#along the deck rather than the same way in the world.
+	#
+	#This is plain Sable behaviour, and it is what you get standing on a turning
+	#platform without this mod: Sable takes the deck's turn back out of your yaw every
+	#frame, so the mast you were looking at stays in front of you and walking towards
+	#it is one held key. Sable stands that down the moment an entity carries an
+	#orientation of its own, which a leaning body always does - so with the lean on,
+	#and only then, the deck used to rotate out from under the view and a spinning
+	#propeller could not be walked on at all.
+	#
+	#On, the turn is taken back out the same way Sable does it, measured about the
+	#body's own up rather than the world's, since that is the axis a leaning body
+	#turns about. Off leaves the view where it was - the deck spins beneath you and
+	#your heading is the world's.
+	#
+	#Only decides what happens while you are LEANING. With no lean Sable answers for
+	#this, and it always turns you.
+	turnWithDeck = true
+	#How much of the deck's turn your standing MOMENTUM is turned by, as a share of
+	#what your heading was turned by. Only while turnWithDeck is doing the turning.
+	#
+	#Turning the heading is only half of walking a spinner. A tick of walking keeps
+	#about half of last tick's velocity, and that half is a world direction: it still
+	#points where the deck was pointing a tick ago, while the stride you are adding
+	#points where it points now. The two are added, so you travel between them - hold
+	#W and you go diagonally, leaning towards the trailing side, by an angle that
+	#grows with how fast the deck turns. At a third of a turn a second that is most
+	#of twenty degrees, which is not a nuisance, it is unwalkable.
+	#
+	#So the leftover is turned by exactly what the heading was turned by, at the top
+	#of the tick that is about to spend it, and the stride adds to a momentum already
+	#pointing the same way.
+	#
+	#1.0 carries it exactly. Higher leads: a tick is spent travelling a straight line
+	#in the world while the deck keeps turning under it, so about half a tick of turn
+	#is always owed. Raise this if you still drift towards the trailing side, lower it
+	#if you curl into the spin. 0.0 = off, which is the drift described above.
+	#
+	#Sable: Sure Footing does the same thing from its own end (rotate_ground_velocity).
+	#Run one or the other - both at once over-rotates and curls you into the spin.
+	# Default: 1.0
+	# Range: 0.0 ~ 3.0
+	deckMomentum = 0.0
+	#How sticky a deck is, in ticks. A tilted body brushing a sub-level with its
+	#shoulder is not standing on it, so that touch is not allowed to carry him
+	#along - but a body that WAS standing on it a moment ago still is, even on the
+	#ticks the floor answers with a side contact instead of one from below: a step,
+	#a seam, the corner of a stair. This is how long that memory lasts.
+	#0.0 = a deck carries only on the ticks it is provably underfoot, which lets
+	#go of ledges and stairs; higher values hold on to a wall you are merely
+	#leaning against.
+	# Default: 20.0
+	# Range: 0.0 ~ 200.0
+	deckCarryTicks = 20.0
+
+#Which sub-levels are worth tilting onto at all, and when a tilt is dropped.
+[activation]
+	#Only tilt when the sub-level mass is at least the threshold (primary factor)
+	gateMassEnabled = false
+	#Minimum sub-level mass to allow tilt
+	# Default: 10.0
+	# Range: 0.0 ~ 1.0E8
+	gateMassMin = 10.0
+	#Only tilt when the sub-level block count is at least the threshold
+	gateBlocksEnabled = false
+	#Minimum sub-level block count to allow tilt
+	# Default: 10
+	# Range: 0 ~ 100000000
+	gateBlocksMin = 10
+	#Only tilt when the sub-level length (X) is at least the threshold
+	gateLengthEnabled = false
+	#Minimum sub-level length in blocks (X) to allow tilt
+	# Default: 3
+	# Range: 1 ~ 100000
+	gateLengthMin = 3
+	#Only tilt when the sub-level height (Y) is at least the threshold
+	gateHeightEnabled = false
+	#Minimum sub-level height in blocks (Y) to allow tilt
+	# Default: 3
+	# Range: 1 ~ 100000
+	gateHeightMin = 3
+	#Only tilt when the sub-level width (Z) is at least the threshold
+	gateWidthEnabled = false
+	#Minimum sub-level width in blocks (Z) to allow tilt
+	# Default: 3
+	# Range: 1 ~ 100000
+	gateWidthMin = 3
+	#Forget the tracked sub-level the moment every ray misses, instead of keeping
+	#it in case the floor comes back. Stops the camera picking the deck up again
+	#once the player is above and clear of it.
+	dropOnAllMiss = true
+	#How much a sub-level you are INSIDE gets to say about which way is up.
+	#
+	#The rays answer what is under the boots, which is the right question on a deck and
+	#the wrong one everywhere else aboard: halfway up a jump, on a ladder, out over an
+	#open hold, drifting through the hangar in creative. And while BUILDING one it is the
+	#wrong question altogether - a frame that holds still is worth more than the exact
+	#slope of whatever block you happen to be standing on.
+	#
+	#OFF - the rays are the only answer.
+	#NO_FLOOR - the vessel answers on the frames the rays cannot.
+	#ALWAYS - the vessel answers for as long as you are inside it, floor or no floor.
+	#
+	#Overlapping vessels are settled by how deep inside each one you are, and the same
+	#margin and delay that keep a seam from flip-flopping keep two hulls from trading
+	#you back and forth.
+	#
+	#Allowed Values: OFF, NO_FLOOR, ALWAYS
+	zoneMode = "OFF"
+	#How far past the hull the zone still counts, in blocks.
+	#
+	#Zero is the vessel itself and nothing more, which is too mean a line to build on:
+	#step off the edge to place a block and the frame lets go of you. A few blocks of
+	#reach puts the boundary out where the scaffolding is. Measured outward from the
+	#sub-level's own shape, not from the box the world draws round it - a rotated hull's
+	#world box is a sack several blocks bigger than the ship in every direction, and
+	#standing in the sack is not standing aboard.
+	#
+	# Default: 2.0
+	# Range: 0.0 ~ 32.0
+	zoneReach = 2.0
+	#How long the vessel keeps you after you have left its zone, in ticks.
+	#
+	#A boundary crossed is not always a boundary left: a jump that carries you out and
+	#back, a step off the scaffold, a hull that drifts out from under you. Without this,
+	#the frame drops the moment you cross and picks you up again a tick later, which is
+	#the flicker this whole mod spends its time avoiding elsewhere. The tilt follows the
+	#vessel while it lasts, so a ship that turns during it turns you with it.
+	#0.0 = let go on the frame the boundary is crossed.
+	#
+	# Default: 10.0
+	# Range: 0.0 ~ 200.0
+	zoneLingerTicks = 10.0
+	#Stop body tilt when flying (Creative or Spectator)
+	disableOnFlying = true
+
+#The rays that find the floor under the feet. More of them, and longer ones,
+#cost more per frame; the defaults are cheap and land on ordinary decks.
+[raycast]
+	#Number of raycasts (10 is usually enough)
+	# Default: 10
+	# Range: 1 ~ 10000
+	count = 10
+	#Distance from player down to floor
+	# Default: 7.0
+	# Range: 0.1 ~ 12.0
+	downLength = 7.0
+	#Raycast start offset from foot
+	# Default: 0.2
+	# Range: -1.0 ~ 1.0
+	upLength = 0.2
+	#How far out from the middle the ring of rays is spread, in blocks. About the
+	#player's own half-width by default, so the normal comes from the ground he is
+	#actually standing on rather than from a single point between his feet. Wider
+	#reads a slope earlier and catches the neighbouring block on a ledge.
+	# Default: 0.58
+	# Range: 0.0 ~ 2.0
+	radius = 0.58
+	#Read the floor as one surface, whoever owns it.
+	#
+	#Off, the rays report only the sub-level Sable says you are tracking, and that
+	#answer is whatever your hitbox last touched from below. On a step between two
+	#decks a leaning body dips its lower corner into the deck beneath, the answer
+	#flips to that one, the body turns towards it, the corner lifts clear, the
+	#answer flips back - a swing that feeds itself, because the lean decides the
+	#input that decides the lean.
+	#
+	#On, every ray is instead asked what it actually landed on, and the floor is
+	#the weighted average of all of it - both decks at a seam, and the ground where
+	#there is no deck. Nothing about it depends on how far over you are already
+	#leaning, so there is nothing left to swing, and crossing a seam becomes one
+	#continuous slide from one floor to the other instead of a choice between them.
+	blendFooting = true
+	#How far below your boots a surface still counts as the floor you are standing
+	#on, in blocks - at exactly this depth it is worth half a vote, and it fades
+	#smoothly from there.
+	#Small values ignore everything but the floor immediately underfoot, so a deck
+	#one step down - or a hole beside your boots - barely registers. Large ones let
+	#the floor further under you pull the lean towards itself. Applies to the rays
+	#of a single deck as well, so it is worth something with blendFooting off too.
+	# Default: 0.6
+	# Range: 0.05 ~ 4.0
+	footingGrip = 0.6
+	#How much more of your weight another deck must be taking before it is allowed
+	#to become the one carrying you, as a fraction (0.2 = a fifth more). The lean
+	#itself is always shared out honestly; this only decides which single deck the
+	#tilt is stamped against, and holding that still is what stops a hand-over
+	#every other tick while you straddle a seam. 0.0 = whoever is ahead this frame.
+	#Needs blendFooting.
+	# Default: 0.2
+	# Range: 0.0 ~ 0.9
+	footingMargin = 0.2
+	#And how long, in ticks, it has to keep that lead before the hand-over happens.
+	#A real walk from one deck to the next holds it easily; a seam never does.
+	#Needs blendFooting.
+	# Default: 4.0
+	# Range: 0.0 ~ 60.0
+	footingDwellTicks = 4.0
+
+#Unfinished work: may look wrong in cases nobody has walked into yet, and
+#may change shape between builds. Each entry says whether it is on.
+[experimental]
+	#Aim the body at the surface it is going to land on and spend the flight
+	#turning towards it, instead of straightening in mid-air and snapping back on
+	#touchdown. The flight is simulated forward to find where the feet arrive, and
+	#the turn is walked along a smoothstep, so it leaves gently and settles into
+	#the landing. Also what makes airborneHoldTicks apply.
+	predictLanding = true
+	#How far ahead, in ticks, the flight is simulated when looking for the landing.
+	#Longer sees the end of a high jump; a flight still unfinished at the horizon
+	#is left to the ordinary hold.
+	# Default: 40
+	# Range: 1 ~ 200
+	predictHorizonTicks = 40
+	#Finish the turn this many ticks before touchdown, so the last moments of a
+	#flight are still and the landing is not the frame the body is still rotating
+	#in.
+	# Default: 2.0
+	# Range: 0.0 ~ 20.0
+	landingLeadTicks = 2.0
+	#Tilt mobs standing on a sub-level along with the deck.
+	#
+	#ONLY USED when the server does not have the mod. Nothing is sent for a
+	#mob's tilt - every side works it out for itself - so on a real server the
+	#answer has to come from one place, and that place is tiltMobs in the
+	#world's own serverconfig folder. Left to the client you would see a tilted
+	#cow where the next player sees an upright one, and the server would run
+	#the collision for a third version.
+	tiltMobs = true
+	#Tilt dropped items lying on a sub-level along with the deck.
+	#Same mechanism as tiltMobs, and the same rule about where it is read from.
+	tiltItems = true
+
+#Only useful when something is wrong.
+[debug]
+	#Draw the floor rays and what they hit
+	rays = false
+	#Write the tilt's own running commentary to the log
+	debugMessages = false
+	#On-screen panel comparing this mod's body tilt with the camera tilt Aeronautics
+	#Camera Sync is applying: both angles, the rotation between them, and the deck
+	#each side is holding on to. The two are meant to be one rotation, and the
+	#moment they most easily are not is a step from one sub-level to the next.
+	#With debugMessages on, the same numbers go to the log twice a second.
+	tiltSyncPanel = false
+	#Write down every frame of a landing.
+	#
+	#The panel and the ordinary log lines answer what is wrong NOW, and a jolt lasts one
+	#frame - so neither can say what moved between two of them. With this on, the last few
+	#seconds of frames are kept in memory and a window of them is printed whenever the feet
+	#touch down, or the camera turns further in a single frame than an eased body ever
+	#could. Each line follows the same angle through every stage it passes: the floor the
+	#rays ask for, the controller's value, the two tick samples, the interpolation everyone
+	#reads, what we hand the camera, what the camera applied, and what the finished view
+	#did. A jump appears at one stage and is smooth at the one before it, which is the
+	#whole diagnosis.
+	#
+	#Costs a formatted line per frame while it is on. For hunting a specific jolt, not for
+	#playing with.
+	#
+	frameTrace = false
+	#How far the camera has to turn in ONE frame, in degrees, before frameTrace calls it a
+	#jump and prints the window around it. Smoothing spreads a turn over many frames, so at
+	#any ordinary frame rate a real one is a few tenths; a value that was snapped somewhere
+	#is whole degrees. Lower to catch smaller ones, at the price of windows you did not
+	#want. Ignored while frameTrace is off.
+	#
+	# Default: 0.75
+	# Range: 0.05 ~ 45.0
+	frameTraceJump = 0.75

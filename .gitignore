@@ -1,8 +1,10 @@
 # No jars, ever — distribution principle
 *.jar
 
-# Tier C manual folder — contents recorded in the exceptions register
-manual/
+# Tier C manual folder — contents recorded in the exceptions register.
+# Only README.md (the pointer to that register) is tracked.
+manual/*
+!manual/README.md
 
 # Build output
 pack/*.mrpack
@@ -19,3 +21,7 @@ world_the_end/
 logs/
 crash-reports/
 *.log
+
+# Per-host server profile and secrets — never committed
+server/.env
+server/rcon_password

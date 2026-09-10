@@ -1,0 +1,4 @@
+tiltMobs = true
+tiltItems = true
+#Allowed Values: WORLD, DECK
+deckGravity = "DECK"

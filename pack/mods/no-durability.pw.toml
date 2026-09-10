@@ -1,0 +1,13 @@
+name = "No Durability"
+filename = "No Durability-neoforge-1.21.1-1.0.0.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "ec68e9e7352f8cb5007be88b0901572b2d27afbd"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 6771484
+project-id = 420724
