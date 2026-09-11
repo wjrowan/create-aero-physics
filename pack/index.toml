@@ -30,7 +30,7 @@ hash = "8e3da1ccfd17d7ad875bfcdfd8c2c881ba0c0593cfc31f085756edc205773f72"
 
 [[files]]
 file = "config/ftbchunks-world.snbt"
-hash = "05630cb96ae94257e2ffe1ee29f08b443aeec337ccbe71603d7b3fc5d3abaf91"
+hash = "a40e5e37f1ce8d7a7ca61d4db8c8d435c3a3ca1f3971585fd919b10070ecff50"
 
 [[files]]
 file = "config/toolbelt-server.toml"
