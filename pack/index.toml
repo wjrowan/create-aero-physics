@@ -466,6 +466,11 @@ hash = "ebf0dae777cc19c354a662dc8144009dff7269b2d05624b4591fcb7de56fc14e"
 metafile = true
 
 [[files]]
+file = "mods/ldlib.pw.toml"
+hash = "f2d7ff6d5461aa811f68ebc450009a4e3a3d53a06f7cbd52f09d75a7a08b916e"
+metafile = true
+
+[[files]]
 file = "mods/libipn.pw.toml"
 hash = "0d2a00252d64ed7d2d9b19994f7accb780304be61f3903d36e810714b414c6cb"
 metafile = true
