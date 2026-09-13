@@ -531,6 +531,11 @@ hash = "bf3c84eff52457596d58a73882e72759804117f0731a0fde343cfd54d33e55ba"
 metafile = true
 
 [[files]]
+file = "mods/sable-schematic-tool.pw.toml"
+hash = "bdb86f7611da8c045e82f4aca7cf4bde48a0271b2859c938551ecebb6f94d08d"
+metafile = true
+
+[[files]]
 file = "mods/sable-sure-footing.pw.toml"
 hash = "27baa699ff025d9c84da6019dd2899c2e8f429395b16b0e109d11f535add22b7"
 metafile = true
