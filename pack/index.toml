@@ -9,10 +9,6 @@ file = "config/aero_player_tilt-client.toml"
 hash = "1647fb44008551bc95e6328969dfb267b82ed665087de2645265d60f44c2f006"
 
 [[files]]
-file = "config/aero_player_tilt-server.toml"
-hash = "358a406b2f791e88ff669bf31a52e6e4415a729bad840d1a7dd33ea25f8b80ed"
-
-[[files]]
 file = "config/biomesize.json"
 hash = "83f8df75a9d0ea58642d712dc8dc2c817b3e7729d94ee55a1c7ad348d397217d"
 
@@ -94,6 +90,14 @@ file = "datapacks/aerophys-defaults/data/aerophys/function/load.mcfunction"
 hash = "7a91ae6e1c277b61c25921f59a3029b11ca87a1b1bee99521b335ce6e3ecd46a"
 
 [[files]]
+file = "datapacks/aerophys-defaults/data/fluidlogistics/advancement/recipes/infinite_fluid_tank.json"
+hash = "5178b123e975b4ab28180a2b1a08033654bf139dfa9c4bc71d14e29c22192d97"
+
+[[files]]
+file = "datapacks/aerophys-defaults/data/fluidlogistics/recipe/mechanical_crafting/infinite_fluid_tank.json"
+hash = "57af909caa6c8fd5125265fe00cb317a1dbf4b358486a81b0e136976f0886b9e"
+
+[[files]]
 file = "datapacks/aerophys-defaults/data/minecraft/dimension_type/the_nether.json"
 hash = "6bf0ab3c80e408b529b4a538e4287e8e41c3039ef8838168f73aec38ef52af58"
 
@@ -148,6 +152,14 @@ hash = "51107dced091d00021aa680f9a3ead0c74949851f9438b0038e33dbc015395f4"
 [[files]]
 file = "datapacks/aerophys-defaults/pack.mcmeta"
 hash = "b172879c5ed321ee8d23f4a86f24f14ea7643f0ade5b889e93b12328453d8b23"
+
+[[files]]
+file = "defaultconfigs/aero_player_tilt-server.toml"
+hash = "bda0d6b0117e50a57b82a26cb20e248e8b05f9e193821a612334cb6bcb2684d1"
+
+[[files]]
+file = "defaultconfigs/fluidlogistics-server.toml"
+hash = "a62d3dae9c0c4e15b52498a531b459bfb277e6ff180e014726fb2be5762e450a"
 
 [[files]]
 file = "mods/3dskinlayers.pw.toml"

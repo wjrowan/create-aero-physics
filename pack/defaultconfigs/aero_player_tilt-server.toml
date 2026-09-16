@@ -1,3 +1,11 @@
+# Aeronautics Player Tilt - server (per-world) config.
+#
+# In defaultconfigs/, not config/: the mod registers this spec as
+# ModConfig.Type.SERVER, which NeoForge stores per world under
+# <world>/serverconfig/. A copy at config/ is never read. defaultconfigs/ is
+# the seed NeoForge copies from when a world is CREATED, so existing worlds
+# need it placed in their serverconfig/ by hand.
+
 tiltMobs = true
 tiltItems = true
 #Allowed Values: WORLD, DECK
