@@ -393,8 +393,9 @@ configSchemaVersion = 7
 	#different game, not an optional gadget, so it stays off until upstream gives
 	#it an actual equip step.
 	#
-	#Still beta upstream in any case. The server's allowMagneticBoots is left
-	#permissive, so this is the only switch deciding it.
+	#Still beta upstream in any case. The server withdraws the permission too
+	#(allowMagneticBoots = false in aero_player_tilt-server.toml), so both ends
+	#say no and turning this one back on by itself achieves nothing.
 	#
 	#The key is literally "test" - beta naming upstream, not a placeholder we left in.
 	test = false

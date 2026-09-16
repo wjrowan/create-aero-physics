@@ -6,7 +6,7 @@ hash = "43c766c084c6919984fbc5975c47e8565297781dd7f661503f59829cd3fc00fb"
 
 [[files]]
 file = "config/aero_player_tilt-client.toml"
-hash = "a352346d907f29a07defeefcbec001c71aac63cc5ca3d59ef4c9b270028376a8"
+hash = "1f1c7d115f81a1287edb6983539358ac0cb0b4e056bd6bdfc1f08becffd368ed"
 
 [[files]]
 file = "config/biomesize.json"
@@ -175,7 +175,7 @@ hash = "b172879c5ed321ee8d23f4a86f24f14ea7643f0ade5b889e93b12328453d8b23"
 
 [[files]]
 file = "defaultconfigs/aero_player_tilt-server.toml"
-hash = "bda0d6b0117e50a57b82a26cb20e248e8b05f9e193821a612334cb6bcb2684d1"
+hash = "85d51b56f608831e2367a11734a9fa31054ed0de94679d9031b97f368d7e95b7"
 
 [[files]]
 file = "defaultconfigs/fluidlogistics-server.toml"

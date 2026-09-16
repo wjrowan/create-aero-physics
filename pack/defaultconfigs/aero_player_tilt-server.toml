@@ -20,9 +20,13 @@ enforceMaxTilt = false
 maxTilt = 0.8
 #Allow magnetic boots [Beta]: any face becomes the player's floor - walls,
 #ceilings - so a whole sub-level can be walked rather than only its decks.
-#This is the server's permission; the client turns it on with "test" under
-#[experimental] in aero_player_tilt-client.toml, which this pack ships enabled.
-allowMagneticBoots = true
+#
+#OFF. Not an item and not equippable: on, it is a permanent change to how
+#movement works for everyone. The client also ships it off ("test" under
+#[experimental] in aero_player_tilt-client.toml); this line is the server
+#withdrawing the permission as well, so a client that turns its own copy back
+#on still does not get it here.
+allowMagneticBoots = false
 #Allow sticky tilt: players do not slide off tilted decks. Permission only -
 #the pack ships gripSlopes off on the client, since magnetic boots already
 #hold you to any face.
