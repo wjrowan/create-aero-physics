@@ -22,7 +22,7 @@ hash = "74ba0731b3d72575fc019d8380d3a3e93d4d88088722c1b815d080cc7db02f09"
 
 [[files]]
 file = "config/create_dragons_plus-common.toml"
-hash = "f0f1ac65ee174b7b4c289495473a209604cf79b3b99b3ec33e052a19fa8092b1"
+hash = "520e6219463a02347692a2fc957afead690bb9e578f8612b9558b6bb49a4a9d1"
 
 [[files]]
 file = "config/entity_texture_features.json"
@@ -92,6 +92,18 @@ hash = "b3b59e058380c3533532253ba13beb72682de31196ea5d3cfbf051ecf1ff10a5"
 [[files]]
 file = "datapacks/aerophys-defaults/data/aerophys/function/load.mcfunction"
 hash = "7a91ae6e1c277b61c25921f59a3029b11ca87a1b1bee99521b335ce6e3ecd46a"
+
+[[files]]
+file = "datapacks/aerophys-defaults/data/c/tags/item/hidden_from_recipe_viewers.json"
+hash = "29d4f5b58af72f2c5fd906a44ef944eedb3fcc98be86b734a4b0de36e4350cd8"
+
+[[files]]
+file = "datapacks/aerophys-defaults/data/create_dragons_plus/advancement/recipes/fluid_hatch.json"
+hash = "b17add7f642b8ee4ae1a56a9e70e379d04fc9c21dbfc3a3f97b131560fa916ea"
+
+[[files]]
+file = "datapacks/aerophys-defaults/data/create_dragons_plus/recipe/crafting/fluid_hatch.json"
+hash = "d3ffe1ee4c39a5d5509dfba33f7b538944d2f4a80f51d6c01e3d1f87a52de812"
 
 [[files]]
 file = "datapacks/aerophys-defaults/data/create_enchantment_industry/recipe/item_application/experience_hatch.json"
