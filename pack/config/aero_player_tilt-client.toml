@@ -387,12 +387,17 @@ configSchemaVersion = 7
 	#Magnetic boots [Beta]. Any face becomes your floor - walls, ceilings.
 	#Jump again in the air to let go.
 	#
-	#Enabled for this pack: walking the whole of a sub-level rather than only its
-	#decks is the point of it. Still beta upstream, so it may look wrong in cases
-	#nobody has walked into yet. The server gates it with allowMagneticBoots.
+	#OFF for this pack. It is not an item - there is no pair of boots to put on
+	#and no way to take them off. Turning it on makes every player stick to every
+	#face, all the time, as a permanent change to how movement works. That is a
+	#different game, not an optional gadget, so it stays off until upstream gives
+	#it an actual equip step.
+	#
+	#Still beta upstream in any case. The server's allowMagneticBoots is left
+	#permissive, so this is the only switch deciding it.
 	#
 	#The key is literally "test" - beta naming upstream, not a placeholder we left in.
-	test = true
+	test = false
 	#Reach. How far below your feet to look for a surface.
 	# Default: 0.75
 	# Range: 0.1 ~ 4.0
