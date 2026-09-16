@@ -47,6 +47,29 @@ services:
       # ---- the pack: one source of truth, same URL the clients use ---------
       PACKWIZ_URL: "${PACKWIZ_URL}"
 
+      # ---- push the pack's server configs into the live world ---------------
+      # NeoForge SERVER-type configs are PER WORLD: they live in
+      # world/serverconfig/, and defaultconfigs/ only seeds them when a world is
+      # CREATED. So on an existing world a pack config change never lands -
+      # which is exactly the trap aero_player_tilt and fluidlogistics fell into.
+      #
+      # The image syncs COPY_CONFIG_SRC -> COPY_CONFIG_DEST on every start, and
+      # start-setupModpack runs the packwiz installer BEFORE it execs
+      # start-setupMounts. So by the time this sync happens, packwiz has already
+      # written /data/defaultconfigs from PACKWIZ_URL: the pack stays the single
+      # source of truth and no bind mount of a host checkout is involved.
+      COPY_CONFIG_SRC: "/data/defaultconfigs"
+      COPY_CONFIG_DEST: "/data/world/serverconfig"
+
+      # THE LINE THAT MAKES IT WORK. The sync defaults to
+      # --skip-newer-in-destination, and NeoForge rewrites world/serverconfig on
+      # shutdown - so the destination is ALWAYS newer and every file would be
+      # silently skipped. False means the pack wins on every start.
+      #
+      # The cost, stated plainly: edits made to server configs on the server are
+      # discarded at the next restart. Change them in pack/defaultconfigs/.
+      SYNC_SKIP_NEWER_IN_DESTINATION: "false"
+
       # ---- memory ----------------------------------------------------------
       # INIT == MAX deliberately. See phase 9 §7.4.
       INIT_MEMORY: "${HEAP}"

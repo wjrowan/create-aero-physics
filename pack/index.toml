@@ -21,6 +21,10 @@ file = "config/create_connected-common.toml"
 hash = "74ba0731b3d72575fc019d8380d3a3e93d4d88088722c1b815d080cc7db02f09"
 
 [[files]]
+file = "config/create_dragons_plus-common.toml"
+hash = "f0f1ac65ee174b7b4c289495473a209604cf79b3b99b3ec33e052a19fa8092b1"
+
+[[files]]
 file = "config/entity_texture_features.json"
 hash = "8e3da1ccfd17d7ad875bfcdfd8c2c881ba0c0593cfc31f085756edc205773f72"
 
@@ -88,6 +92,10 @@ hash = "b3b59e058380c3533532253ba13beb72682de31196ea5d3cfbf051ecf1ff10a5"
 [[files]]
 file = "datapacks/aerophys-defaults/data/aerophys/function/load.mcfunction"
 hash = "7a91ae6e1c277b61c25921f59a3029b11ca87a1b1bee99521b335ce6e3ecd46a"
+
+[[files]]
+file = "datapacks/aerophys-defaults/data/create_enchantment_industry/recipe/item_application/experience_hatch.json"
+hash = "481ba24f240fb1bfedb8301d7d59f92c9342bfc39e26f8f825e8aaf01826e2f2"
 
 [[files]]
 file = "datapacks/aerophys-defaults/data/fluidlogistics/advancement/recipes/infinite_fluid_tank.json"
