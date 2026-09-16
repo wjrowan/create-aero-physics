@@ -13,6 +13,9 @@ configSchemaVersion = 7
 	#1-wide gap can actually be walked through. Other players see the tilt only when
 	#the mod is installed on the server.
 	playerTilt = true
+	#Tilts the camera with the body. Off keeps the camera aligned with the world,
+	#so only the model and the collision box lean.
+	rotateCamera = true
 	#Maximum tilt threshold (0.0 - 1.0): the minimum Y of a deck normal that still
 	#counts as walkable. Surfaces steeper than this are never tilted onto, and a tilt
 	#the ship rotates past this limit is dropped instead of held - so the player falls
@@ -26,6 +29,11 @@ configSchemaVersion = 7
 	# Default: 0.8
 	# Range: 0.0 ~ 1.0
 	minNormalY = 0.8
+	#Sticky tilt. Don't slide off tilted decks.
+	#Left off here on purpose: magnetic boots are enabled below and they already
+	#hold you to any face, so this would only be a second answer to the same
+	#question. Server-gated by allowStickyTilt.
+	gripSlopes = false
 	#Which way you fall while airborne over a leaning deck.
 	#
 	#WORLD - the world's own down, which is what you get without this mod. A jump
@@ -376,6 +384,32 @@ configSchemaVersion = 7
 	# Default: 2.0
 	# Range: 0.0 ~ 20.0
 	landingLeadTicks = 2.0
+	#Magnetic boots [Beta]. Any face becomes your floor - walls, ceilings.
+	#Jump again in the air to let go.
+	#
+	#Enabled for this pack: walking the whole of a sub-level rather than only its
+	#decks is the point of it. Still beta upstream, so it may look wrong in cases
+	#nobody has walked into yet. The server gates it with allowMagneticBoots.
+	#
+	#The key is literally "test" - beta naming upstream, not a placeholder we left in.
+	test = true
+	#Reach. How far below your feet to look for a surface.
+	# Default: 0.75
+	# Range: 0.1 ~ 4.0
+	testReach = 0.75
+	#Lean start. How close an edge has to be before the body leans over it.
+	#0 - no lean.
+	# Default: 0.3
+	# Range: 0.0 ~ 0.5
+	testLeanStart = 0.3
+	#Grip. How hard the boots press into the face. Doesn't affect jumps.
+	# Default: 1.0
+	# Range: 0.25 ~ 6.0
+	testPull = 1.0
+	#Turn speed. How long the body takes to turn onto a new face. 0 - instant.
+	# Default: 1.0
+	# Range: 0.0 ~ 20.0
+	testSmooth = 1.0
 	#Tilt mobs standing on a sub-level along with the deck.
 	#
 	#ONLY USED when the server does not have the mod. Nothing is sent for a

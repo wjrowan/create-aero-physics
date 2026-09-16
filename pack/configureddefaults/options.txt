@@ -166,12 +166,12 @@ key_iris.keybind.wireframe:key.keyboard.unknown
 key_simulated.keyinfo.rotate_mode:key.keyboard.g
 key_simulated.keyinfo.scroll_up:key.keyboard.unknown
 key_simulated.keyinfo.scroll_down:key.keyboard.unknown
-key_key.push_to_talk:key.keyboard.v
+key_key.push_to_talk:key.keyboard.unknown
 key_key.whisper:key.keyboard.unknown
 key_key.mute_microphone:key.keyboard.b
 key_key.disable_voice_chat:key.keyboard.unknown
 key_key.hide_icons:key.keyboard.unknown
-key_key.voice_chat:key.keyboard.unknown
+key_key.voice_chat:key.keyboard.right.bracket
 key_key.voice_chat_settings:key.keyboard.unknown
 key_key.voice_chat_group:key.keyboard.unknown
 key_key.voice_chat_toggle_recording:key.keyboard.unknown
@@ -190,7 +190,7 @@ key_key.jade.show_details:key.keyboard.unknown
 key_key.curios.open.desc:key.keyboard.unknown
 key_key.ftbteams.open_gui:key.keyboard.unknown
 key_key.ftbchunks.map:key.keyboard.m
-key_key.ftbchunks.toggle_minimap:key.keyboard.right.bracket
+key_key.ftbchunks.toggle_minimap:key.keyboard.left.bracket
 key_key.ftbchunks.claim_manager:key.keyboard.unknown
 key_key.ftbchunks.minimap.zoomIn:key.keyboard.equal
 key_key.ftbchunks.minimap.zoomOut:key.keyboard.minus

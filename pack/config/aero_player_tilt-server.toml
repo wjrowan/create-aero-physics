@@ -2,3 +2,20 @@ tiltMobs = true
 tiltItems = true
 #Allowed Values: WORLD, DECK
 deckGravity = "DECK"
+#Enforce a world-wide maximum tilt, sent to everyone who joins, so nobody can
+#lean further than anyone else. Off leaves each client on its own minNormalY.
+enforceMaxTilt = false
+#The steepest floor that still counts as standing. Only read while
+#enforceMaxTilt is on.
+# Default: 0.8
+# Range: 0.0 ~ 1.0
+maxTilt = 0.8
+#Allow magnetic boots [Beta]: any face becomes the player's floor - walls,
+#ceilings - so a whole sub-level can be walked rather than only its decks.
+#This is the server's permission; the client turns it on with "test" under
+#[experimental] in aero_player_tilt-client.toml, which this pack ships enabled.
+allowMagneticBoots = true
+#Allow sticky tilt: players do not slide off tilted decks. Permission only -
+#the pack ships gripSlopes off on the client, since magnetic boots already
+#hold you to any face.
+allowStickyTilt = true

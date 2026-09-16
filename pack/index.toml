@@ -6,11 +6,11 @@ hash = "43c766c084c6919984fbc5975c47e8565297781dd7f661503f59829cd3fc00fb"
 
 [[files]]
 file = "config/aero_player_tilt-client.toml"
-hash = "12b8565b2b2dd4446717447edb19cbcd18b35e5165db0f29d0449a668183530e"
+hash = "1647fb44008551bc95e6328969dfb267b82ed665087de2645265d60f44c2f006"
 
 [[files]]
 file = "config/aero_player_tilt-server.toml"
-hash = "56c09fbee3772f4a15e8bb145e5369e1b38d4d0a81e0449d73f95ede8598a881"
+hash = "358a406b2f791e88ff669bf31a52e6e4415a729bad840d1a7dd33ea25f8b80ed"
 
 [[files]]
 file = "config/biomesize.json"
@@ -69,8 +69,12 @@ file = "configureddefaults/config/toolbelt-client.toml"
 hash = "097f6d7da2499f735e058eabcb2743929db2d9e3a3f34f8ab4447057cf497bbc"
 
 [[files]]
+file = "configureddefaults/config/voicechat/voicechat-client.properties"
+hash = "947674c35194fd252e3e7cbcb52a1a15c0e95ddc2154d28ff54721a5d14bd661"
+
+[[files]]
 file = "configureddefaults/options.txt"
-hash = "1ffd7dbb45759935e78027b5b392ffa07a8347dfd61ffdfd21f424bb77810e9d"
+hash = "4f6369701bf78a69443816a0f97a43ef4beb1377e9796cd79d87bdb37b08f607"
 
 [[files]]
 file = "configureddefaults/shaderpacks/ComplementaryReimagined_r5.8.1 + EuphoriaPatches_1.9.3.txt"
@@ -162,7 +166,7 @@ metafile = true
 
 [[files]]
 file = "mods/aeronautics-player-tilt.pw.toml"
-hash = "e8e97a1b7ff511a445fb659c1c6d81e0fe322a25f60d7c4359de067496f78475"
+hash = "c1a82db6a7cb5f3e71f932c233d84b32ccf7398a794a5ca935e3edbe4f1a6daf"
 metafile = true
 
 [[files]]
@@ -343,6 +347,11 @@ metafile = true
 [[files]]
 file = "mods/createaddition.pw.toml"
 hash = "350357b34feae2f0971d114ba856e4915e508efec110eea5ebdeac419d515e08"
+metafile = true
+
+[[files]]
+file = "mods/createfluidlogistic.pw.toml"
+hash = "878fec0a8afab1f4487c73fac572b611128aef872ce3fbe5e30664423173c514"
 metafile = true
 
 [[files]]
