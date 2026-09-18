@@ -1,0 +1,13 @@
+name = "Drive-By-Sable"
+filename = "drivebysable-r1.3.0-beta.jar"
+side = "both"
+
+[download]
+url = "https://cdn.modrinth.com/data/rrNGnYXg/versions/MOf1sTtD/drivebysable-r1.3.0-beta.jar"
+hash-format = "sha512"
+hash = "042e352d61954c78e70c88089846774a41b4c90797bed0f6f05647bea37c77fcbc4e4ccc18026314cd6892bab2719818c79839adfad822001555ac86cabc67ab"
+
+[update]
+[update.modrinth]
+mod-id = "rrNGnYXg"
+version = "MOf1sTtD"
