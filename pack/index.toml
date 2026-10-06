@@ -328,7 +328,7 @@ metafile = true
 
 [[files]]
 file = "mods/create-bits-n-bobs.pw.toml"
-hash = "4930d2adc5440081d3c26446f3234e706790ec4fc8c408755ead1eb8677eb366"
+hash = "d2ce5df4378fb57e446ec7838a5d30278b3545a4c481c50daef5eff5c4ae1d3b"
 metafile = true
 
 [[files]]
