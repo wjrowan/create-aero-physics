@@ -237,6 +237,11 @@ hash = "f2707463a84b3da22e3b0bb89f702f5df944b9da49bd23e701982883d65a9977"
 metafile = true
 
 [[files]]
+file = "mods/bits-n-tracks-ce.pw.toml"
+hash = "d62a1c549cb2506d6cd5f9b2c3911f5dba1c8b526cb6c42caf3bb22e370aadf4"
+metafile = true
+
+[[files]]
 file = "mods/carbon-config.pw.toml"
 hash = "5d9c4167ef4c04142844bf3b43252f1b6bed5eefaae2a0e101b7c9172316e774"
 metafile = true
