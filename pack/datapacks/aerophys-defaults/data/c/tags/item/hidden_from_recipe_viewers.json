@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    {
+      "id": "create_dragons_plus:fluid_hatch",
+      "required": false
+    }
+  ]
+}

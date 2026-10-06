@@ -1,0 +1,16 @@
+# Create: FluidLogistic - server (per-world) config.
+#
+# This lives in defaultconfigs/ rather than config/ because the mod registers
+# this spec as ModConfig.Type.SERVER, which NeoForge stores per world under
+# <world>/serverconfig/. defaultconfigs/ is the seed NeoForge copies from when
+# a world is CREATED - it does not reach worlds that already exist.
+
+#Enable/disable features. Server-authoritative.
+[featureToggles]
+	#The Infinite Fluid Tank is a bottomless supply of one fluid, and it was
+	#craftable in survival at a 5x5 mechanical crafting recipe. Disabled for
+	#this pack: a creative-tier fluid source does not belong behind a recipe.
+	#
+	#This removes the block itself, not just the recipe - the recipe carries a
+	#fluidlogistics:feature_enabled condition, so it stops loading along with it.
+	infiniteFluidTankEnabled = false
