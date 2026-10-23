@@ -1,0 +1,13 @@
+name = "Swinura's Aeronautica Bed Fix"
+filename = "aerobedfix-1.0.0.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "47e5830b8f36c1219f292384744947802b02c719"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 8771488
+project-id = 1675277

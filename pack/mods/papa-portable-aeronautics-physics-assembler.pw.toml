@@ -1,0 +1,13 @@
+name = "PAPA: Portable Aeronautics Physics Assembler"
+filename = "portable_physics_assembler-1.0.0.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "62b966b73bf848be7fd9d47cccb6757134a1a37a"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 8282499
+project-id = 1581233
